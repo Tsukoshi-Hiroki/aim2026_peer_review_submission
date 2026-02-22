@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2025.10.5)  19 FEB 2026 07:45
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2025.10.5)  22 FEB 2026 09:41
  restricted system commands enabled.
  file:line:error style messages enabled.
 **conference_101719.tex
@@ -1913,24 +1913,30 @@ undefined
 (Font)              No change on input line 132.
 LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/sc' 
 undefined
-(Font)              No change on input line 137.
+(Font)              No change on input line 141.
 <fig/pipeline_and_concept.pdf, id=1, 1564.6455pt x 370.0224pt>
 File: fig/pipeline_and_concept.pdf Graphic file (type pdf)
 <use fig/pipeline_and_concept.pdf>
-Package luatex.def Info: fig/pipeline_and_concept.pdf  used on input line 141.
+Package luatex.def Info: fig/pipeline_and_concept.pdf  used on input line 145.
 (luatex.def)             Requested size: 516.0pt x 122.02872pt.
 <fig/panorama_shift_concept.pdf, id=2, 995.8806pt x 199.4652pt>
 File: fig/panorama_shift_concept.pdf Graphic file (type pdf)
 <use fig/panorama_shift_concept.pdf>
-Package luatex.def Info: fig/panorama_shift_concept.pdf  used on input line 148
+Package luatex.def Info: fig/panorama_shift_concept.pdf  used on input line 152
 .
 (luatex.def)             Requested size: 516.0pt x 103.34813pt.
+<fig/sliding_window_concept.pdf, id=3, 1280.53406pt x 569.12625pt>
+File: fig/sliding_window_concept.pdf Graphic file (type pdf)
+<use fig/sliding_window_concept.pdf>
+Package luatex.def Info: fig/sliding_window_concept.pdf  used on input line 159
+.
+(luatex.def)             Requested size: 516.0pt x 229.33119pt.
 LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
 undefined
-(Font)              No change on input line 153.
+(Font)              No change on input line 164.
 LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
 undefined
-(Font)              No change on input line 162.
+(Font)              No change on input line 173.
 
 
 [1
@@ -1940,127 +1946,138 @@ ap/pdftex.map}
 
 
 ]
+
 LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
 undefined
-(Font)              No change on input line 174.
+(Font)              No change on input line 192.
+
+
+[2<./fig/pipeline_and_concept.pdf><./fig/panorama_shift_concept.pdf><./fig/slidi
+ng_window_concept.pdf>]
 LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
 undefined
-(Font)              No change on input line 193.
+(Font)              No change on input line 214.
 
 
 LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/sc' 
 undefined
-(Font)              No change on input line 235.
+(Font)              No change on input line 256.
 LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
 undefined
-(Font)              No change on input line 236.
+(Font)              No change on input line 257.
 LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
 undefined
-(Font)              No change on input line 254.
+(Font)              No change on input line 275.
 
 
-[2<./fig/pipeline_and_concept.pdf><./fig/panorama_shift_concept.pdf>]
-<fig/env_dkan1f_2way.pdf, id=60, 601.4972pt x 368.1253pt>
+[3]
+<fig/env_dkan1f_2way.pdf, id=80, 601.4972pt x 368.1253pt>
 File: fig/env_dkan1f_2way.pdf Graphic file (type pdf)
 <use fig/env_dkan1f_2way.pdf>
-Package luatex.def Info: fig/env_dkan1f_2way.pdf  used on input line 307.
+Package luatex.def Info: fig/env_dkan1f_2way.pdf  used on input line 328.
 (luatex.def)             Requested size: 226.79846pt x 138.80496pt.
-<fig/env_outdoor_crossroads.pdf, id=61, 614.295pt x 176.15813pt>
+<fig/env_outdoor_crossroads.pdf, id=81, 614.295pt x 176.15813pt>
 File: fig/env_outdoor_crossroads.pdf Graphic file (type pdf)
 <use fig/env_outdoor_crossroads.pdf>
-Package luatex.def Info: fig/env_outdoor_crossroads.pdf  used on input line 311
+Package luatex.def Info: fig/env_outdoor_crossroads.pdf  used on input line 332
 .
 (luatex.def)             Requested size: 226.79846pt x 65.0377pt.
-<fig/ex_ld_dkan1fjuuji3_simple.pdf, id=62, 246.4407pt x 213.1965pt>
+<fig/ex_ld_dkan1fjuuji3_simple.pdf, id=82, 246.4407pt x 213.1965pt>
 File: fig/ex_ld_dkan1fjuuji3_simple.pdf Graphic file (type pdf)
 <use fig/ex_ld_dkan1fjuuji3_simple.pdf>
 Package luatex.def Info: fig/ex_ld_dkan1fjuuji3_simple.pdf  used on input line 
-326.
+347.
 (luatex.def)             Requested size: 129.0pt x 111.598pt.
-<fig/ex_ld_dkan1fjuuji3_simple_with_shift.pdf, id=63, 255.8358pt x 213.1965pt>
+<fig/ex_ld_dkan1fjuuji3_simple_with_shift.pdf, id=83, 255.8358pt x 213.1965pt>
 File: fig/ex_ld_dkan1fjuuji3_simple_with_shift.pdf Graphic file (type pdf)
 <use fig/ex_ld_dkan1fjuuji3_simple_with_shift.pdf>
 Package luatex.def Info: fig/ex_ld_dkan1fjuuji3_simple_with_shift.pdf  used on 
-input line 327.
+input line 348.
 (luatex.def)             Requested size: 129.0pt x 107.50233pt.
-<fig/ex_ld_dkan1fjuuji3_spatial.pdf, id=64, 455.301pt x 213.1965pt>
+<fig/ex_ld_dkan1fjuuji3_spatial.pdf, id=84, 455.301pt x 213.1965pt>
 File: fig/ex_ld_dkan1fjuuji3_spatial.pdf Graphic file (type pdf)
 <use fig/ex_ld_dkan1fjuuji3_spatial.pdf>
 Package luatex.def Info: fig/ex_ld_dkan1fjuuji3_spatial.pdf  used on input line
- 328.
+ 349.
 (luatex.def)             Requested size: 232.19843pt x 108.72551pt.
 
-Overfull \hbox (28.28496pt too wide) in paragraph at lines 325--331
+Overfull \hbox (28.28496pt too wide) in paragraph at lines 346--352
  [][][][] 
  []
 
-<fig/ex_ld_reverse_direction_simple.pdf, id=65, 265.9536pt x 213.1965pt>
+<fig/ex_ld_reverse_direction_simple.pdf, id=85, 265.9536pt x 213.1965pt>
 File: fig/ex_ld_reverse_direction_simple.pdf Graphic file (type pdf)
 <use fig/ex_ld_reverse_direction_simple.pdf>
 Package luatex.def Info: fig/ex_ld_reverse_direction_simple.pdf  used on input 
-line 336.
+line 357.
 (luatex.def)             Requested size: 129.0pt x 103.41318pt.
-<fig/ex_ld_reverse_direction_simple_with_shift.pdf, id=66, 247.8861pt x 213.196
+<fig/ex_ld_reverse_direction_simple_with_shift.pdf, id=86, 247.8861pt x 213.196
 5pt>
 File: fig/ex_ld_reverse_direction_simple_with_shift.pdf Graphic file (type pdf)
 
 <use fig/ex_ld_reverse_direction_simple_with_shift.pdf>
 Package luatex.def Info: fig/ex_ld_reverse_direction_simple_with_shift.pdf  use
-d on input line 337.
+d on input line 358.
 (luatex.def)             Requested size: 129.0pt x 110.95064pt.
-<fig/ex_ld_reverse_direction_spatial.pdf, id=67, 505.1673pt x 213.1965pt>
+<fig/ex_ld_reverse_direction_spatial.pdf, id=87, 505.1673pt x 213.1965pt>
 File: fig/ex_ld_reverse_direction_spatial.pdf Graphic file (type pdf)
 <use fig/ex_ld_reverse_direction_spatial.pdf>
 Package luatex.def Info: fig/ex_ld_reverse_direction_spatial.pdf  used on input
- line 338.
+ line 359.
 (luatex.def)             Requested size: 232.19843pt x 97.99675pt.
 
-Overfull \hbox (28.28496pt too wide) in paragraph at lines 335--341
+Overfull \hbox (28.28496pt too wide) in paragraph at lines 356--362
  [][][][] 
  []
 
-<fig/ex_ld_outdoor_crossroads_simple.pdf, id=68, 257.2812pt x 213.1965pt>
+<fig/ex_ld_outdoor_crossroads_simple.pdf, id=88, 257.2812pt x 213.1965pt>
 File: fig/ex_ld_outdoor_crossroads_simple.pdf Graphic file (type pdf)
 <use fig/ex_ld_outdoor_crossroads_simple.pdf>
 Package luatex.def Info: fig/ex_ld_outdoor_crossroads_simple.pdf  used on input
- line 346.
+ line 367.
 (luatex.def)             Requested size: 129.0pt x 106.90051pt.
-<fig/ex_ld_outdoor_crossroads_simple_with_shift.pdf, id=69, 250.7769pt x 213.19
+<fig/ex_ld_outdoor_crossroads_simple_with_shift.pdf, id=89, 250.7769pt x 213.19
 65pt>
 File: fig/ex_ld_outdoor_crossroads_simple_with_shift.pdf Graphic file (type pdf
 )
 <use fig/ex_ld_outdoor_crossroads_simple_with_shift.pdf>
 Package luatex.def Info: fig/ex_ld_outdoor_crossroads_simple_with_shift.pdf  us
-ed on input line 347.
+ed on input line 368.
 (luatex.def)             Requested size: 129.0pt x 109.67216pt.
-<fig/ex_ld_outdoor_crossroads_spatial.pdf, id=70, 480.5955pt x 213.1965pt>
+<fig/ex_ld_outdoor_crossroads_spatial.pdf, id=90, 480.5955pt x 213.1965pt>
 File: fig/ex_ld_outdoor_crossroads_spatial.pdf Graphic file (type pdf)
 <use fig/ex_ld_outdoor_crossroads_spatial.pdf>
 Package luatex.def Info: fig/ex_ld_outdoor_crossroads_spatial.pdf  used on inpu
-t line 348.
+t line 369.
 (luatex.def)             Requested size: 232.19843pt x 103.00328pt.
 
-Overfull \hbox (28.28496pt too wide) in paragraph at lines 345--351
+Overfull \hbox (28.28496pt too wide) in paragraph at lines 366--372
  [][][][] 
  []
 
 LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/sc' 
 undefined
-(Font)              No change on input line 366.
-LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/sc' 
-undefined
-(Font)              No change on input line 375.
-LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/sc' 
-undefined
-(Font)              No change on input line 378.
-
-
-LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
-undefined
 (Font)              No change on input line 387.
+LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/sc' 
+undefined
+(Font)              No change on input line 396.
+LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/sc' 
+undefined
+(Font)              No change on input line 399.
 LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
 undefined
-(Font)              No change on input line 391.
+(Font)              No change on input line 408.
+LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
+undefined
+(Font)              No change on input line 412.
+LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
+undefined
+(Font)              No change on input line 417.
+
+
+LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
+undefined
+(Font)              No change on input line 422.
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -2074,7 +2091,7 @@ Before submitting the final camera ready copy, remember to:
 
 
 
-[3<./fig/env_dkan1f_2way.pdf><./fig/env_outdoor_crossroads.pdf>] [4<./fig/ex_ld_
+[4<./fig/env_dkan1f_2way.pdf><./fig/env_outdoor_crossroads.pdf>] [5<./fig/ex_ld_
 dkan1fjuuji3_simple.pdf><./fig/ex_ld_dkan1fjuuji3_simple_with_shift.pdf><./fig/e
 x_ld_dkan1fjuuji3_spatial.pdf><./fig/ex_ld_reverse_direction_simple.pdf><./fig/e
 x_ld_reverse_direction_simple_with_shift.pdf><./fig/ex_ld_reverse_direction_spat
@@ -2092,14 +2109,14 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 )
 
 Here is how much of LuaTeX's memory you used:
- 22902 strings out of 476291
- 382240,953878 words of node,token memory allocated
+ 22916 strings out of 476291
+ 382252,953878 words of node,token memory allocated
  1070 words of node memory still in use:
    11 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 192 attribute, 60 glue_sp
 ec, 29 attribute_list, 1 write, 14 user_defined nodes
-   avail lists: 1:26,2:81975,3:679,4:554,5:380,6:73,7:15125,8:16,9:4467,10:22,11
-:524
- 44424 multiletter control sequences out of 65536+600000
+   avail lists: 1:26,2:98245,3:712,4:572,5:379,6:71,7:15306,8:16,9:4861,10:22,11
+:522
+ 44435 multiletter control sequences out of 65536+600000
  114 fonts using 117704039 bytes
  107i,12n,122p,1769b,499s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman8-italic.otf
@@ -2122,10 +2139,10 @@ ist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on conference_101719.pdf (4 pages, 1463672 bytes).
+Output written on conference_101719.pdf (5 pages, 1607070 bytes).
 
-PDF statistics: 250 PDF objects out of 1000 (max. 8388607)
- 121 compressed objects within 2 object streams
+PDF statistics: 268 PDF objects out of 1000 (max. 8388607)
+ 134 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)
 

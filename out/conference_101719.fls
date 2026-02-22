@@ -323,6 +323,8 @@ INPUT ./fig/pipeline_and_concept.pdf
 INPUT ./fig/pipeline_and_concept.pdf
 INPUT ./fig/panorama_shift_concept.pdf
 INPUT ./fig/panorama_shift_concept.pdf
+INPUT ./fig/sliding_window_concept.pdf
+INPUT ./fig/sliding_window_concept.pdf
 OUTPUT out/conference_101719.pdf
 INPUT /usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT ./fig/env_dkan1f_2way.pdf

@@ -131,6 +131,10 @@ Topological Map, Visual Place Recognition, Panoramic Image
 % \section{Ease of Use}
 \section{関連研究}
 
+トポロジカルマップは，環境をノードとアークからなるグラフ構造として抽象的に表現する手法である．
+このような表現は，環境変化に対する頑健性や計算効率の面で優れており，経路計画および自律移動において有効であることが示されている\cite{ref:Metric-Topological}.
+さらに，人間の空間認知においてもトポロジカル構造に基づく認知地図の存在が示唆されており，ロボティクスへの応用が進められている\cite{ref:The-Spatial-Semantic-Hierarchy}．
+本稿では，これらの利点を活かしつつ，全周パノラマ画像の方位の特性と空間的一貫性チェックに基づくトポロジカルマップの構築手法を提案する．
 % \subsection{Maintaining the Integrity of the Specifications}
 
 
@@ -138,16 +142,23 @@ Topological Map, Visual Place Recognition, Panoramic Image
 
 \begin{figure*}[t]
   \centering
-  \includegraphics[width=\linewidth]{fig/pipeline_and_concept.pdf} \vspace*{-8mm}
+  \includegraphics[width=\linewidth]{fig/pipeline_and_concept.pdf} \vspace*{-5mm}
   \caption{提案手法のパイプラインと概念図}
   \label{fig:pipeline_and_concept}
 \end{figure*}
 
 \begin{figure*}[t]
   \centering
-  \includegraphics[width=\linewidth]{fig/panorama_shift_concept.pdf} \vspace*{-8mm}
+  \includegraphics[width=\linewidth]{fig/panorama_shift_concept.pdf} \vspace*{-5mm}
   \caption{パノラマシフトの概念図}
   \label{fig:panorama_shift_concept}
+\end{figure*}
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=\linewidth]{fig/sliding_window_concept.pdf} \vspace*{-5mm}
+  \caption{空間的一貫性チェックの概念図}
+  \label{fig:sliding_window_concept}
 \end{figure*}
 
 \subsection{概要}\label{AA}
@@ -171,35 +182,45 @@ Topological Map, Visual Place Recognition, Panoramic Image
 次に，パノラマシフトされた画像列から特徴ベクトルを抽出する．
 提案手法では，特徴抽出器として AnyLoc-VLAD-DINOv2\cite{ref:AnyLoc} を用いる．
 
+式\eqref{eq:feature_vectors}に各画像から抽出された特徴ベクトルの集合を示す．
+\begin{align}
+  V = \{\bm{v}_1, \bm{v}_2, \ldots, \bm{v}_n\}
+  \label{eq:feature_vectors}
+\end{align}
+ここで，$n$は抽出された特徴ベクトルの総数を表す．
+
 \subsection{ノードとアークの作成}
 
 % 提案手法では，前稿\cite{ref:robosym_ogiwara}と同様に視覚的類似度を基にノードとアークを作成する．
 画像間の視覚的類似度を基に，ノードとアークを作成する．
 % 類似度を用いて作成するノードを選定することで，画像間の視覚的変化が少ない場合にはノードが作成されず，ロボットが停止している場合や，視覚的に単調な環境を走行している場合にノードが過剰に作成されることを防ぐ．
 視覚的類似度の評価には，各特徴ベクトル間のコサイン類似度を用いる．
-類似度に対して閾値を設定し，とある画像に対しそれ以降の画像との類似度が閾値以下になると新たにノードを作成し，ノード間にアークを作成する．
-次の回では，直前に作成したノードの特徴ベクトルを基準とし，同様の処理を繰り返すことでロボットの走行経路に沿ったノードとアークが作成される．
+% 類似度に対して閾値を設定し，とある画像に対しそれ以降の画像との類似度が閾値以下になると新たにノードを作成し，ノード間にアークを作成する．
+% 次の回では，直前に作成したノードの特徴ベクトルを基準とし，同様の処理を繰り返すことでロボットの走行経路に沿ったノードとアークが作成される．
+類似度に対して閾値 \text{node\_sim\_th} を設定し，ノードの粗密を調整する．
+具体的には，特徴ベクトル $\bm{v}_i$ を基準として，それ以降の特徴ベクトル $\bm{v}_j$ ($j>i$) との類似度が \text{node\_sim\_th} を上回った場合はノードは追加されず，下回った場合は$\bm{v}_j$が新たなノードとして追加される．
+次の回では，基準となる特徴ベクトルを $\bm{v}_j$ とし，同様の処理を繰り返すことでロボットの走行経路に沿ったノードとアークが作成される．
 % 次の回では，基準となる特徴ベクトルを $\bm{v}_j$ とし，同様の処理を繰り返すことでロボットの走行経路に沿ったノードとアークが作成される．
 式\eqref{eq:nodes}に，作成されたノード列を示す．
 \begin{align}
-  N = \{\bm{n}_1, \bm{n}_2, \ldots, \bm{n}_n\}
+  N = \{\bm{n}_1, \bm{n}_2, \ldots, \bm{n}_m\}
   \label{eq:nodes}
 \end{align}
-ここで，$n$は作成されたノードの総数を表す．
+ここで，$m$は作成されたノードの総数を表す．
 
-% 提案手法では，前稿\cite{ref:robosym_ogiwara}よりも $node\_sim\_th$ を高く設定し，ノード間の距離を短くする．
-% ノード間隔を短くすることで，同一地点を表現するノードを増やすことができ，後述するループ検出でのクエリ画像と類似度の高い画像を増やすことを目的としている．
+提案手法では，前稿\cite{ref:robosym_ogiwara}よりも \text{node\_sim\_th} を高く設定し，ノード間の距離を短くする．
+ノード間隔を短くすることで，同一地点を表現するノードを増やすことができ，後述するループ検出でのクエリ画像と類似度の高い画像を増やすことを目的としている．
 
 \subsection{空間的一貫性チェックを用いたループ検出}
 
-% 単一画像のコサイン類似度だけでは，類似している画像が取得できる別地点との誤検出が発生しやすい．
-% また前稿\cite{ref:robosym_ogiwara}では，そのアルゴリズムの特性上，同一地点を異なる方向から走行する場合はループ検出できない場合がある．
-% 上記のようなループの誤検出や未検出により，実環境と位相構造が異なるトポロジカルマップが構築される．
+単一画像のコサイン類似度だけでは，類似している画像が取得できる別地点との誤検出が発生しやすい．
+また前稿\cite{ref:robosym_ogiwara}では，そのアルゴリズムの特性上，同一地点を異なる方向から走行する場合はループ検出できない場合がある．
+上記のようなループの誤検出や未検出により，実環境と位相構造が異なるトポロジカルマップが構築される．
 
 提案手法では，空間的に連続したノードを用いたループ検出を行うことで，位相的に正しいトポロジカルマップの構築を行う．
 ループ検出の基本的な考えとして，スライディングウィンドウを用いる．
 % ウィンドウには事前に決められた数のノードが格納され，ノード列に対してウィンドウを一つずつずらしながら走査する．
-ウィンドウには事前に決められた数のノードが格納され，それらとクエリノードとの類似度を計算する．
+ウィンドウには事前に決められた \text{window\_size} 個のノードが格納され，それらとクエリノードとの類似度を計算する．
 ノード列に対してウィンドウを一つずつずらしながら走査し，ループ検出対象のノードを特定する．
 % 短い間隔で作成されたノードをウィンドウで走査することで，同一地点を異なる方向から走行した場合でも，ウィンドウ内にクエリと類似度の高いノードが多く含まれ,空間的一貫性を持つループ検出が可能になると考えられる．
 
@@ -210,14 +231,14 @@ Topological Map, Visual Place Recognition, Panoramic Image
 % 以降，$\bm{n}_q$ と類似度を比較する対象のノードをターゲットノード $\bm{n}_t$ と表記する．
 % クエリノード $\bm{n}_q$ に対して類似度を計算するノードをターゲットノード $\bm{n}_t$ とする．
 クエリノードを $\bm{n}_q$ ，それに対し類似度を計算するノードをターゲットノード $\bm{n}_t$ とする．
-まず，ウィンドウ内のノードのうち，$\bm{n}_q$ とループ検出に対する閾値以上の類似度をもつ $\bm{n}_t$ をカウントする．
-次に，一つのウィンドウに対するカウントがカウント用の閾値を超えた場合，そのウィンドウをループ検出の候補ウィンドウとする．
+まず，ウィンドウ内のノードのうち，$\bm{n}_q$ とループ検出に対する閾値 \text{loop\_sim\_th} 以上の類似度をもつ $\bm{n}_t$ をカウントする．
+次に，一つのウィンドウに対するカウントがカウント用の閾値 \text{count\_th} を超えた場合，そのウィンドウをループ検出の候補ウィンドウとする．
 最後に，候補ウィンドウ内で $\bm{n}_q$ と最も類似度の高い $\bm{n}_t$ をループ検出の候補ノード $\bm{n}_c$ とし，ノードペア $(\bm{n}_q, \bm{n}_c)$ を保存する．
 この流れをすべてのノードをクエリノードとして行う．
 
 ウィンドウ内には $\bm{n}_q$ 自身や，$\bm{n}_q$ と時間的に連続した近傍のノードが含まれる場合があり，それらがループ検出されることを防ぐ必要がある．
 そのため，ウィンドウ内に $\bm{n}_q$ 自身と，$\bm{n}_q$ の近傍ノードが含まれる場合は，そのウィンドウでの処理をスキップする．
-% スキップする範囲は，クエリノード $\bm{n}_q$ の前後 $neighbor\_node\_num$ 分のノードとする．
+スキップする範囲は，クエリノード $\bm{n}_q$ の前後 \text{neighbor\_node\_num} 分のノードとする．
 % 以下にここまでの処理で用いるパラメータを示す．
 % \begin{itemize}
 %   \item $loop\_sim\_th$ : クエリノードとターゲットノードのループ検出に対する類似度の閾値
@@ -390,15 +411,15 @@ Takaya Nakao, Yoshitaka Hara, and Yoji Kuroda,
   Nikhil Keetha, Avneesh Mishra, Jay Karhade, Krishna Murthy Jatavallabhula, Sebastian Scherer, Madhava Krishna, and Sourav Garg: ``AnyLoc: Towards Universal Visual Place Recognition'',
   \textit{IEEE Robotics and Automation Letters}, vol. 9, no. 2, pp. 1286--1293, 2023.
 
-% \bibitem{ref:Metric-Topological}
-%   Sebastian Thrun:
-%   ``Learning Metric-Topological Maps for Indoor Mobile Robot Navigation'',
-%   \textit{Artiﬁcial Intelligence},vol. 99, no. 1, pp. 21--71, 1998.
+\bibitem{ref:Metric-Topological}
+  Sebastian Thrun:
+  ``Learning Metric-Topological Maps for Indoor Mobile Robot Navigation'',
+  \textit{Artiﬁcial Intelligence},vol. 99, no. 1, pp. 21--71, 1998.
 
-% \bibitem{ref:The-Spatial-Semantic-Hierarchy}
-%   Benjamin Kuipers:
-%   ``The Spatial Semantic Hierarchy'',
-%   \textit{Artiﬁcial Intelligence},vol. 119, no. 1-2, pp. 191--233, 2000.
+\bibitem{ref:The-Spatial-Semantic-Hierarchy}
+  Benjamin Kuipers:
+  ``The Spatial Semantic Hierarchy'',
+  \textit{Artiﬁcial Intelligence},vol. 119, no. 1-2, pp. 191--233, 2000.
 
 % \bibitem{ref:ndt}
 %   P. Biber, and W. Strasser: 
