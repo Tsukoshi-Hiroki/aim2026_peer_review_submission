@@ -197,8 +197,8 @@ Topological Map, Visual Place Recognition, Panoramic Image
 視覚的類似度の評価には，各特徴ベクトル間のコサイン類似度を用いる．
 % 類似度に対して閾値を設定し，とある画像に対しそれ以降の画像との類似度が閾値以下になると新たにノードを作成し，ノード間にアークを作成する．
 % 次の回では，直前に作成したノードの特徴ベクトルを基準とし，同様の処理を繰り返すことでロボットの走行経路に沿ったノードとアークが作成される．
-類似度に対して閾値 \text{node\_sim\_th} を設定し，ノードの粗密を調整する．
-具体的には，特徴ベクトル $\bm{v}_i$ を基準として，それ以降の特徴ベクトル $\bm{v}_j$ ($j>i$) との類似度が \text{node\_sim\_th} を上回った場合はノードは追加されず，下回った場合は$\bm{v}_j$が新たなノードとして追加される．
+類似度に対して閾値 \textit{node\_sim\_th} を設定し，ノードの粗密を調整する．
+具体的には，特徴ベクトル $\bm{v}_i$ を基準として，それ以降の特徴ベクトル $\bm{v}_j$ ($j>i$) との類似度が \textit{node\_sim\_th} を上回った場合はノードは追加されず，下回った場合は$\bm{v}_j$が新たなノードとして追加される．
 次の回では，基準となる特徴ベクトルを $\bm{v}_j$ とし，同様の処理を繰り返すことでロボットの走行経路に沿ったノードとアークが作成される．
 % 次の回では，基準となる特徴ベクトルを $\bm{v}_j$ とし，同様の処理を繰り返すことでロボットの走行経路に沿ったノードとアークが作成される．
 式\eqref{eq:nodes}に，作成されたノード列を示す．
@@ -208,7 +208,7 @@ Topological Map, Visual Place Recognition, Panoramic Image
 \end{align}
 ここで，$m$は作成されたノードの総数を表す．
 
-提案手法では，前稿\cite{ref:robosym_ogiwara}よりも \text{node\_sim\_th} を高く設定し，ノード間の距離を短くする．
+提案手法では，前稿\cite{ref:robosym_ogiwara}よりも \textit{node\_sim\_th} を高く設定し，ノード間の距離を短くする．
 ノード間隔を短くすることで，同一地点を表現するノードを増やすことができ，後述するループ検出でのクエリ画像と類似度の高い画像を増やすことを目的としている．
 
 \subsection{空間的一貫性チェックを用いたループ検出}
@@ -220,7 +220,7 @@ Topological Map, Visual Place Recognition, Panoramic Image
 提案手法では，空間的に連続したノードを用いたループ検出を行うことで，位相的に正しいトポロジカルマップの構築を行う．
 ループ検出の基本的な考えとして，スライディングウィンドウを用いる．
 % ウィンドウには事前に決められた数のノードが格納され，ノード列に対してウィンドウを一つずつずらしながら走査する．
-ウィンドウには事前に決められた \text{window\_size} 個のノードが格納され，それらとクエリノードとの類似度を計算する．
+ウィンドウには事前に決められた \textit{window\_size} 個のノードが格納され，それらとクエリノードとの類似度を計算する．
 ノード列に対してウィンドウを一つずつずらしながら走査し，ループ検出対象のノードを特定する．
 % 短い間隔で作成されたノードをウィンドウで走査することで，同一地点を異なる方向から走行した場合でも，ウィンドウ内にクエリと類似度の高いノードが多く含まれ,空間的一貫性を持つループ検出が可能になると考えられる．
 
@@ -231,14 +231,14 @@ Topological Map, Visual Place Recognition, Panoramic Image
 % 以降，$\bm{n}_q$ と類似度を比較する対象のノードをターゲットノード $\bm{n}_t$ と表記する．
 % クエリノード $\bm{n}_q$ に対して類似度を計算するノードをターゲットノード $\bm{n}_t$ とする．
 クエリノードを $\bm{n}_q$ ，それに対し類似度を計算するノードをターゲットノード $\bm{n}_t$ とする．
-まず，ウィンドウ内のノードのうち，$\bm{n}_q$ とループ検出に対する閾値 \text{loop\_sim\_th} 以上の類似度をもつ $\bm{n}_t$ をカウントする．
-次に，一つのウィンドウに対するカウントがカウント用の閾値 \text{count\_th} を超えた場合，そのウィンドウをループ検出の候補ウィンドウとする．
+まず，ウィンドウ内のノードのうち，$\bm{n}_q$ とループ検出に対する閾値 \textit{loop\_sim\_th} 以上の類似度をもつ $\bm{n}_t$ をカウントする．
+次に，一つのウィンドウに対するカウントがカウント用の閾値 \textit{count\_th} を超えた場合，そのウィンドウをループ検出の候補ウィンドウとする．
 最後に，候補ウィンドウ内で $\bm{n}_q$ と最も類似度の高い $\bm{n}_t$ をループ検出の候補ノード $\bm{n}_c$ とし，ノードペア $(\bm{n}_q, \bm{n}_c)$ を保存する．
 この流れをすべてのノードをクエリノードとして行う．
 
 ウィンドウ内には $\bm{n}_q$ 自身や，$\bm{n}_q$ と時間的に連続した近傍のノードが含まれる場合があり，それらがループ検出されることを防ぐ必要がある．
 そのため，ウィンドウ内に $\bm{n}_q$ 自身と，$\bm{n}_q$ の近傍ノードが含まれる場合は，そのウィンドウでの処理をスキップする．
-スキップする範囲は，クエリノード $\bm{n}_q$ の前後 \text{neighbor\_node\_num} 分のノードとする．
+スキップする範囲は，クエリノード $\bm{n}_q$ の前後 \textit{neighbor\_node\_num} 分のノードとする．
 % 以下にここまでの処理で用いるパラメータを示す．
 % \begin{itemize}
 %   \item $loop\_sim\_th$ : クエリノードとターゲットノードのループ検出に対する類似度の閾値
@@ -253,12 +253,31 @@ Topological Map, Visual Place Recognition, Panoramic Image
 
 これらの処理により，ループ検出の誤検出を抑制しつつ位相的に正しいトポロジカルマップを構築できると考えられる．
 
+\begin{figure}[t]
+  \centering
+  \begin{tabular}{c}
+      \includegraphics[width=0.9\linewidth]{fig/env_dkan1f_2way.pdf}\\
+      (a) 屋内交差（赤色）・屋内逆方向（青色） \vspace*{2mm}
+  \end{tabular} 
+  \begin{tabular}{c}
+      \includegraphics[width=0.9\linewidth]{fig/env_outdoor_crossroads.pdf}\\
+      (b) 屋外交差 \vspace*{2mm}
+  \end{tabular} 
+  \begin{tabular}{c}
+      \includegraphics[width=0.9\linewidth]{fig/env_dkan_outdoor_inverse.pdf}\\
+      (c) 屋外逆方向 \vspace*{2mm}
+  \end{tabular} 
+  \caption{実験環境と走行経路} \vspace*{-2mm}
+  \label{fig:env_images}
+\end{figure}
+
+
 \section{実験}
 \subsection{実験条件}
 \label{sec:exp_conditions}
 
 図\ref{fig:env_images}に，各実験環境と走行経路を示す．
-実験環境および走行経路は，屋内交差，屋内逆方向，屋外交差の3種類である．
+実験環境および走行経路は，屋内交差，屋内逆方向，屋外交差，屋外逆方向の4種類である．
 図\ref{fig:env_images}(a) の赤色の経路は屋内交差，青色の経路は屋内逆方向である．
 % 構築されたトポロジカルマップの定性評価により，提案手法の有効性を評価した．
 
@@ -272,37 +291,96 @@ WHILL Model CR をベースとした後輪差動駆動の車輪ロボットに R
 3D Lidar（Velodyne VLP-32MR），IMU（Xsense MTi-30），車輪オドメトリを用い，点群位置合わせに基づいてメトリックなロボット位置を求めた．
 これらの情報は，トポロジカルマップの構築には一切用いていない．
 
-\subsection{トポロジカルマップの構築}
 
-% 本稿のトポロジカルマップの構築では，動画から画像列を作成する際の一定の時間間隔を1.0 [s]，ノードの粗密を調整するパラメータ $node\_sim\_th$ = 0.80で統一した．
+\subsection{画像のパノラマシフトを用いた特徴抽出によるコサイン類似度の変化}
+\label{sec:ex_panorama_shift}
 
-構築したトポロジカルマップと，ループ検出の正誤を評価する．
+% 図\ref{fig:panorama_image_reverse_direction}に屋内環境,図\ref{fig:panorama_image_outdoor_crossroads_08_30}に屋外環境で取得した通常のパノラマ画像とパノラマシフト後の画像の例を示す．
+% 図\ref{fig:panorama_image_reverse_direction}，\ref{fig:panorama_image_outdoor_crossroads_08_30}共にパノラマシフトなしの場合は，画像の両端で人が見切れているのに対し，パノラマシフトありの場合は画像の切れ目が変更され，人が中央に配置されていることが分かる．
+
+図\ref{fig:ex_sim_panorama_shift_outdoor}に屋外環境で取得した画像列に対するコサイン類似度の変化の例を示す．
+図\ref{fig:ex_sim_panorama_shift_outdoor}(a)はパノラマシフトなしの場合，(b)はパノラマシフトありの場合である．
+Query 画像と Target 画像は，図\ref{fig:env_images}(b)の走行経路において交差地点で取得した画像であり，同一地点ではあるがロボットの進行方向が異なる際に取得した画像である．
+
+図\ref{fig:ex_sim_panorama_shift_outdoor}(a)では，Query 画像と Target 画像を比較すると，画像を構成する建物や自然物は同じであるが，位置関係が異なる．
+一方，図\ref{fig:ex_sim_panorama_shift_outdoor}(b)では，パノラマシフトにより画像の切れ目が変更され，人などの動くものを除き，画像を構成する物体の位置関係が同じになっている．
+コサイン類似度はパノラマシフトなしの場合は0.360であるのに対し，パノラマシフトありの場合は0.641であり，78.1\%の改善が見られる．
+ただし，コサイン類似度の有効数字は3桁としている．
+これらの結果から，同一地点を異なる方向から再訪した場合でも，パノラマシフトにより画像の切れ目を変更し，画像内の物体の位置関係を揃えることで，視覚的類似度を向上させることができると考えられる．
+
+
+% \begin{figure}[t]
+%   \centering
+%   \begin{tabular}{cc}
+%   \includegraphics[width=0.5\linewidth]{fig/panorama_image_reverse_direction.pdf} & \includegraphics[width=0.45\linewidth]{fig/panorama_image_reverse_direction_with_shift.pdf} \vspace*{1mm} \\
+%   (a) パノラマシフトなし & (b) パノラマシフトあり
+%   \end{tabular}  
+%   \caption{屋内環境のパノラマ画像の例}
+%   \label{fig:panorama_image_reverse_direction}
+% \end{figure}
+
+% \begin{figure}[t]
+%   \centering
+%   \begin{tabular}{cc}
+%   \includegraphics[width=0.5\linewidth]{fig/panorama_image_outdoor_crossroads_08_30.pdf} & \includegraphics[width=0.45\linewidth]{fig/panorama_image_outdoor_crossroads_08_30_with_shift.pdf} \vspace*{1mm} \\
+%   (a) パノラマシフトなし & (b) パノラマシフトあり
+%   \end{tabular}  
+%   \caption{屋外環境のパノラマ画像の例}
+%   \label{fig:panorama_image_outdoor_crossroads_08_30}
+% \end{figure}
+
+
+\begin{figure}[t]
+  \centering
+  \begin{tabular}{c}
+      \includegraphics[width=\linewidth]{fig/ex_sim_panorama_shift_off.pdf}\\
+      (a) パノラマシフトなし
+      \label{fig:ex_sim_panorama_shift_off}
+  \end{tabular} 
+  \begin{tabular}{c}
+      \includegraphics[width=\linewidth]{fig/ex_sim_panorama_shift_on.pdf}\\
+      (b) パノラマシフトあり
+      \label{fig:ex_sim_panorama_shift_on}
+  \end{tabular} 
+  \caption{パノラマシフトによるコサイン類似度の変化}
+  \label{fig:ex_sim_panorama_shift_outdoor}
+\end{figure}
+
+
+% \subsection{トポロジカルマップの構築}
+\subsection{一貫性チェックを用いたループ検出によるトポロジカルマップの構築}
+
+本稿のトポロジカルマップの構築では，動画から画像列を作成する際の一定の時間間隔を1.0 [s]，ノードの粗密を調整するパラメータ \textit{node\_sim\_th} = 0.80 で統一した．
+
+図\ref{fig:ex_add_node}に各走行経路においてのメトリックマップ上でのノードの作成位置を示す．
+ノードの数や粗密は各画像から抽出される特徴ベクトルのコサイン類似度に依存するため，同じ動画データを用いてもパノラマシフトの有無によりノードの数や位置が異なる．
+図\ref{fig:ex_add_node}には，パノラマシフトを行った後の画像を用いて作成したノードを示す．
+\ref{sec:exp_conditions}節より，ノードの位置はメトリックな情報から算出している．
+図\ref{fig:ex_add_node}より，\textit{node\_sim\_th} を高い値に設定したことで，ノード間隔は短くなり，図\ref{fig:env_images}に示す走行経路と比較すると，走行経路上のほぼ全ての地点にノードが作成されていることが分かる．
+
+次に，構築したトポロジカルマップと，ループ検出の正誤を評価する．
 ループ検出の正誤判定には，\ref{sec:exp_conditions}節で述べたメトリックな情報を用いた．
-本稿では，ループ検出の精度評価のために3つの手法でトポロジカルマップを構築，それぞれの結果を比較し，定性評価する．
+本稿では，ループ検出の精度評価のために3つの手法でトポロジカルマップを構築，それぞれの結果を比較し，定性・定量評価する．
 
-\textbf{単純な閾値}：通常の全周画像を用いて特徴ベクトルを抽出し，クエリノードとターゲットノードのコサイン類似度が閾値を上回った場合にループ検出を行う．
+\textbf{単純な閾値}：通常の全周画像を用いて特徴ベクトルを抽出し，クエリノードとターゲットノードのコサイン類似度が閾値 \textit{loop\_sim\_th} を上回った場合にループ検出を行う．
 
 \textbf{パノラマシフト + 単純な閾値}：パノラマシフトを行った全周画像を用いて特徴ベクトルを抽出し，単純な閾値と同様のループ検出を行う．
 
 \textbf{パノラマシフト + 一貫性チェック}：パノラマシフトを行った全周画像を用いて特徴ベクトルを抽出し，空間的一貫性チェックを用いてループ検出を行う．
 
-% \begin{itemize}
-%   \item 単純な閾値: 通常の画像を用いて特徴ベクトルを抽出し，クエリノードとターゲットノードのコサイン類似度が $loop\_sim\_th$ を上回った場合にループ検出を行う．
-%   \item パノラマシフト + 単純な閾値: パノラマシフトを行った画像を用いて特徴ベクトルを抽出し，クエリノードとターゲットノードのコサイン類似度が $loop\_sim\_th$ を上回った場合にループ検出を行う．
-%   \item パノラマシフト + 一貫性チェック: パノラマシフトを行った画像を用いて特徴ベクトルを抽出し，空間的一貫性チェックを用いてループ検出を行う．
-% \end{itemize}
-% 全ての実験において，$loop\_sim\_th$ = 0.55に統一した．
-% パノラマシフト + 一貫性チェックにおいては，$window\_size$ = 5，$count\_th$ = 2に統一し，$neighbor\_node\_num$ は走行経路により適応的に変更した．
+全ての実験において，\textit{loop\_sim\_th} = 0.55 に統一した．
+パノラマシフト + 一貫性チェックにおいては，\textit{window\_size} = 5，\textit{count\_th} = 2に統一し，\textit{neighbor\_node\_num} は走行経路により適応的に変更した．
 
-% ループ検出の正誤判定には，\ref{sec:exp_conditions}節で述べたメトリックな情報を用いた．
-% 各ノードに対して，ノード間のメトリックな距離が一定の閾値以内であれば同一地点と判定し，閾値以内のノード同士がループ検出された場合は True Positive (TP)，閾値以上のノード同士がループ検出された場合は False Positive (FP)とした．
-% また，閾値以内のノード同士がループ検出されなかった場合は False Negative (FN) とし，それら以外の場合は True Negative (TN) とした．
-% ただし，単純な閾値では，時間的に近いノード同士がループ検出され，アークが追加されることがある．
-% これはメトリックな距離は閾値の範囲内ではあるものの，トポロジカルマップの位相構造を崩すため，FPとして扱う．
-% ループ検出の正誤判定に用いるメトリック距離の閾値は，3.0 [m] で統一した．
+ループ検出の正誤判定には，\ref{sec:exp_conditions}節で述べたメトリックな情報を用いた．
+各ノードに対して，ノード間のメトリックな距離が一定の閾値以内であれば同一地点と判定し，閾値以内のノード同士がループ検出された場合は True Positive (TP)，閾値以上のノード同士がループ検出された場合は False Positive (FP)とした．
+また，閾値以内のノード同士がループ検出されなかった場合は False Negative (FN) とし，それら以外の場合は True Negative (TN) とした．
+ただし，単純な閾値では，時間的に近いノード同士がループ検出され，アークが追加されることがある．
+これはメトリックな距離は閾値の範囲内ではあるものの，トポロジカルマップの位相構造を崩すため，FPとして扱う．
+ループ検出の正誤判定に用いるメトリック距離の閾値は，1.0 [m] とした．
 
 図\ref{fig:ex_ld_dkanjuuji3}〜\ref{fig:ex_ld_outdoor_crossroads}に，各走行経路において構築したトポロジカルマップを示す．
-% 以降，屋内環境と屋外環境に分けて，トポロジカルマップの構築結果を比較する．
+以降，屋内環境と屋外環境に分けて，トポロジカルマップの構築結果を比較する．
+
 まず，屋内の走行経路である図\ref{fig:env_images}(a)とその実験結果である図\ref{fig:ex_ld_dkanjuuji3}，\ref{fig:ex_ld_reverse_direction}を比較する．
 % まず，屋内環境である図\ref{fig:ex_ld_dkanjuuji3}，\ref{fig:ex_ld_reverse_direction}と図\ref{fig:env_images}(a)の走行経路を比較する．
 % 両走行経路の単純な閾値，パノラマシフト + 単純な閾値では，実環境とは位相構造が異なるトポロジカルマップが構築されているのに対し，パノラマシフト + 一貫性チェックでは，実環境と同様の位相構造をもつトポロジカルマップが構築されていることが分かる．
@@ -311,35 +389,37 @@ WHILL Model CR をベースとした後輪差動駆動の車輪ロボットに R
 単純な閾値とパノラマシフト + 単純な閾値においては，TP なループ検出はあるものの，大きな FP のループが存在し，位相構造の崩れが顕著に見られる．
 一方で，パノラマシフト + 一貫性チェックでは，他2手法で検出されたTPを残しつつ，FPを抑制している．
 
-次に，屋外の走行経路である図\ref{fig:env_images}(b)とその実験結果である図\ref{fig:ex_ld_outdoor_crossroads}を比較する．
+次に，屋外の走行経路である図\ref{fig:env_images}(b)，\ref{fig:env_images}(c)とその実験結果である図\ref{fig:ex_ld_outdoor_crossroads}，\ref{fig:ex_ld_outdoor_inverse}を比較する．
 % 次に，屋外環境である図\ref{fig:ex_ld_outdoor_crossroads}と，図\ref{fig:env_images}(b)の走行経路を比較する．
-単純な閾値では交差地点をループ検出できていないのに対し，パノラマシフト + 単純な閾値では交差地点をループ検出でき,大きなループを構築できている．
+まず屋外交差において，単純な閾値では交差地点をループ検出できていないのに対し，パノラマシフト + 単純な閾値では交差地点をループ検出でき,大きなループを構築できている．
 これはパノラマシフトによる再訪地点での視覚的類似度の向上により，ループ検出が可能になったと考えられる．
 さらに，パノラマシフト + 一貫性チェックでは，パノラマシフトによるTPを維持しつつ，FPを抑制し，実環境と同様の位相構造をもつトポロジカルマップが構築されていることが分かる．
-% 屋外逆方向においても，パノラマシフトによるTPの増加，一貫性チェックによるFPの抑制が見られる．
+屋外逆方向においても，パノラマシフトによるTPの増加，一貫性チェックによるFPの抑制が見られる．
 % また屋外交差と同様に，パノラマシフト + 一貫性チェックでは，TPを維持しつつFPを抑制し，位相的に妥当なトポロジカルマップが構築されていることが分かる．
 
 これらの結果から提案手法は，パノラマシフトによる再訪地点の視覚的類似度の向上により TP なループ検出を増加させつつ，空間的一貫性チェックによりFPなループ検出を抑制し，実環境との位相構造の整合性をもつトポロジカルマップを構築できることが分かる．
 
-
 \begin{figure}[t]
   \centering
   \begin{tabular}{c}
-      \includegraphics[width=0.9\linewidth]{fig/env_dkan1f_2way.pdf}\\
-      (a) 屋内交差（赤色）・屋内逆方向（青色）
+      \includegraphics[width=0.9\linewidth]{fig/ex_add_node_dkanjuuji3.pdf}\\
+      (a) 屋内交差
   \end{tabular} 
   \begin{tabular}{c}
-      \includegraphics[width=0.9\linewidth]{fig/env_outdoor_crossroads.pdf}\\
-      (b) 屋外交差
-  \end{tabular} 
-  % \begin{tabular}{c}
-  %     \includegraphics[width=0.7\linewidth]{fig/env_dkan_outdoor_inverse.pdf}\\
-  %     (c) 屋外逆方向
-  % \end{tabular} 
-  \caption{実験環境と走行経路} \vspace*{-2mm}
-  \label{fig:env_images}
+      \includegraphics[width=0.9\linewidth]{fig/ex_add_node_reverse_direction.pdf}\\
+      (b) 屋内逆方向
+  \end{tabular}
+  \begin{tabular}{c}
+      \includegraphics[width=0.9\linewidth]{fig/ex_add_node_outdoor_crossroads.pdf}\\
+      (c) 屋外交差
+  \end{tabular}
+  \begin{tabular}{c}
+      \includegraphics[width=0.9\linewidth]{fig/ex_add_node_outdoor_invverse.pdf}\\
+      (d) 屋外逆方向
+  \end{tabular}
+  \caption{各走行経路においてのメトリックマップ上でのノードの位置}
+  \label{fig:ex_add_node}
 \end{figure}
-
 
 \begin{figure*}
   \centering
@@ -372,15 +452,15 @@ WHILL Model CR をベースとした後輪差動駆動の車輪ロボットに R
   \caption{屋外交差において構築したトポロジカルマップ}
   \label{fig:ex_ld_outdoor_crossroads}
 
-%   \centering
-%   \begin{tabular}{ccc}
-%     \includegraphics[width=0.2\linewidth]{fig/ex_ld_outdoor_inverse_simple.pdf} &
-%     \includegraphics[width=0.2\linewidth]{fig/ex_ld_outdoor_inverse_simple_with_shift.pdf} &
-%     \includegraphics[width=0.35\linewidth]{fig/ex_ld_outdoor_inverse_spatial.pdf} \\
-%     (a) 単純な閾値 & (b) パノラマシフト + 単純な閾値 & (c) パノラマシフト + 一貫性チェック (Ours) \\
-%   \end{tabular}
-%   \caption{屋外逆方向において構築したトポロジカルマップ}
-%   \label{fig:ex_ld_outdoor_inverse}
+  \centering
+  \begin{tabular}{ccc}
+    \includegraphics[width=0.2\linewidth]{fig/ex_ld_outdoor_inverse_simple.pdf} &
+    \includegraphics[width=0.2\linewidth]{fig/ex_ld_outdoor_inverse_simple_with_shift.pdf} &
+    \includegraphics[width=0.45\linewidth]{fig/ex_ld_outdoor_inverse_spatial.pdf} \\
+    (a) 単純な閾値 & (b) パノラマシフト + 単純な閾値 & (c) パノラマシフト + 一貫性チェック (Ours) \\
+  \end{tabular}
+  \caption{屋外逆方向において構築したトポロジカルマップ}
+  \label{fig:ex_ld_outdoor_inverse}
 
 \end{figure*}
 
@@ -388,7 +468,7 @@ WHILL Model CR をベースとした後輪差動駆動の車輪ロボットに R
 
 本稿では，全周画像の一定の基準のパノラマシフトにより，交差や逆方向での再訪においても視覚場所認識を可能とし，また空間的一貫性チェックによりループ検出の誤検出を抑制することで，実環境との位相構造の整合性を持つトポロジカルマップを構築する手法を提案した．
 
-屋内外の3種類の走行経路で実験を行い定性評価した．
+屋内外の4種類の走行経路で実験を行い定性評価した．
 その結果，パノラマシフトにより再訪地点での視覚的類似度を向上させ，交差や逆方向での再訪においてもループ検出が可能となった．
 さらに，空間的一貫性チェックにより誤検出を抑制し，実環境との位相構造の整合性を持つトポロジカルマップを構築できることを示した．
 % 今後は，本稿で提案したトポロジカルマップを用いた自律走行の実現に取り組む．

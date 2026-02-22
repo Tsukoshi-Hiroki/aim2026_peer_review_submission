@@ -1,10 +1,10 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2025.10.5)  22 FEB 2026 09:41
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2025.12.28)  22 FEB 2026 12:52
  restricted system commands enabled.
  file:line:error style messages enabled.
 **conference_101719.tex
 (./conference_101719.tex
-LaTeX2e <2025-06-01> patch level 1
-L3 programming layer <2025-09-02>
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
 Lua module: luaotfload 2024-12-03 v3.29 Lua based OpenType font support
 Lua module: lualibs 2023-07-13 v2.76 ConTeXt Lua standard libraries.
 Lua module: lualibs-extended 2023-07-13 v2.76 ConTeXt Lua libraries -- extended 
@@ -120,18 +120,18 @@ LaTeX Font Warning: Font shape `TU/ptm/bx/it' undefined
 
 (/usr/local/texlive/2025/texmf-dist/tex/luatex/luatexja/addons/luatexja-preset.
 sty
-Package: luatexja-preset 2024-07-23 Japanese font presets
+Package: luatexja-preset 2025-10-26 Japanese font presets
  (/usr/local/texlive/2025/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2025-09-02 L3 programming layer (loader) 
+Package: expl3 2025-12-24 L3 programming layer (loader) 
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-luatex.def
-File: l3backend-luatex.def 2025-06-09 L3 backend support: PDF output (LuaTeX)
+File: l3backend-luatex.def 2025-10-09 L3 backend support: PDF output (LuaTeX)
 \l__color_backend_stack_int=\count288
 Inserting `l3color' in `luaotfload.parse_color'.))
 (/usr/local/texlive/2025/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
-Package: l3keys2e 2024-08-16 LaTeX2e option processing using LaTeX3 keys
+Package: l3keys2e 2025-10-09 LaTeX2e option processing using LaTeX3 keys
 ) (/usr/local/texlive/2025/texmf-dist/tex/luatex/luatexja/luatexja.sty
-Package: luatexja 2025-09-21 Japanese Typesetting with Lua(La)TeX
+Package: luatexja 2025-11-02 Japanese Typesetting with Lua(La)TeX
 
 (/usr/local/texlive/2025/texmf-dist/tex/luatex/luatexja/luatexja-core.sty
 Package: luatexja-core 2023-10-07 Core of LuaTeX-ja
@@ -165,12 +165,13 @@ Package pdftexcmds Info: \pdfdraftmode found.
 \pdftexcmds@toks=\toks18
 )
 (/usr/local/texlive/2025/texmf-dist/tex/latex/xkeyval/xkeyval.sty
-Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+Package: xkeyval 2025/11/04 v2.10 package option processing (HA)
 
 (/usr/local/texlive/2025/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 (/usr/local/texlive/2025/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks19
 \XKV@tempa@toks=\toks20
+\XKV@tempb@toks=\toks21
 
 (/usr/local/texlive/2025/texmf-dist/tex/generic/xkeyval/keyval.tex))
 \XKV@depth=\count290
@@ -186,12 +187,12 @@ Package: svn-prov 2010/04/24 v3.1862 Package Date/Version from SVN Keywords
 )
 Package: everyhook 2014/11/26 v1.2 (SVN Rev: 12)\ Hooks for low level TeX every
 X primitives.
-\everypar=\toks21
-\frozen@everymath=\toks22
-\frozen@everydisplay=\toks23
-\everyhbox=\toks24
-\everyvbox=\toks25
-\everycr=\toks26
+\everypar=\toks22
+\frozen@everymath=\toks23
+\frozen@everydisplay=\toks24
+\everyhbox=\toks25
+\everyvbox=\toks26
+\everycr=\toks27
 )
 \ltjlineendcomment=\count292
 \ltj@dimen@zw=\dimen171
@@ -358,11 +359,11 @@ Package: ltj-base 2021-03-16
 Package: ltj-latex 2025-06-08 LaTeX support of LuaTeX-ja
 Inserting `ltj.direction' in `pre_shipout_filter'.
 (/usr/local/texlive/2025/texmf-dist/tex/luatex/luatexja/patches/lltjfont.sty
-Package: lltjfont 2023-05-16 Patch to NFSS2 for LuaTeX-ja
+Package: lltjfont 2025-10-26 Patch to NFSS2 for LuaTeX-ja
 \ltj@@latex@plv=\count298
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/base/tuenc.def
-File: tuenc.def 2024/12/21 v2.1c Standard LaTeX file
+File: tuenc.def 2025/07/18 v2.1d Standard LaTeX file
 \@remove@tlig@@@=\luafunction60
 LaTeX Font Info:    Redeclaring font encoding TU on input line 105.
 LaTeX Encoding Info:    Redeclaring text command \textquotesingle (encoding TU)
@@ -686,7 +687,7 @@ on input line 314.
 \dstrutbox=\box56
 \tstrutbox=\box57
 \zstrutbox=\box58
-LaTeX Info: Redefining \strut on input line 70.
+LaTeX Info: Redefining \strut on input line 71.
 \ltj@@add@fenc@@inner=\luafunction61
 \ltj@@add@kyenc@@inner=\luafunction62
 \ltj@@add@ktenc@@inner=\luafunction63
@@ -697,12 +698,12 @@ LaTeX Info: Redefining \strut on input line 70.
 \ltj@@add@ffam@@inner=\luafunction68
 \ltj@@add@kfam@@inner=\luafunction69
 \ltj@@adjust@baseline@inner=\luafunction70
-LaTeX Info: Redefining \fontencoding on input line 572.
-LaTeX Info: Redefining \fontfamily on input line 615.
-LaTeX Info: Redefining \fontseries on input line 769.
-LaTeX Info: Redefining \fontseriesforce on input line 770.
-LaTeX Info: Redefining \fontshape on input line 778.
-LaTeX Info: Redefining \fontshapeforce on input line 789.
+LaTeX Info: Redefining \fontencoding on input line 573.
+LaTeX Info: Redefining \fontfamily on input line 619.
+LaTeX Info: Redefining \fontseries on input line 813.
+LaTeX Info: Redefining \fontseriesforce on input line 814.
+LaTeX Info: Redefining \fontshape on input line 822.
+LaTeX Info: Redefining \fontshapeforce on input line 833.
 \ltj@@jfont@@jfmonly@@inner=\luafunction71
 \ltj@@does@alt@set@@inner=\luafunction72
 \ltj@@cipath@clear@inner=\luafunction73
@@ -738,7 +739,7 @@ Package: lltjcore 2025-06-12 Patch to LaTeX2e Kernel for LuaTeX-ja (for LaTeX2e
 \@CL=\box69
 \@CR=\box70
 (load cache: extra_lmmono9-regular.luc)
-\@bannertoken=\toks27
+\@bannertoken=\toks28
 \@@paperheight=\dimen187
 \@@paperwidth=\dimen188
 \@@topmargin=\dimen189
@@ -759,7 +760,7 @@ Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 \ltj@temp@cctb=\catcodetable16
 )
 (/usr/local/texlive/2025/texmf-dist/tex/luatex/luatexja/luatexja-compat.sty
-Package: luatexja-compat 2020-08-08 Compatibility with pTeX
+Package: luatexja-compat 2025-09-21 Compatibility with pTeX
 (load cache: ltj-jisx0208.luc)
 \hour=\count299
 \minute=\count300
@@ -768,14 +769,14 @@ Package: luatexja-compat 2020-08-08 Compatibility with pTeX
 
 (/usr/local/texlive/2025/texmf-dist/tex/luatex/luatexja/addons/luatexja-fontspe
 c.sty
-Package: luatexja-fontspec 2024-05-14 fontspec support of LuaTeX-ja
+Package: luatexja-fontspec 2025-09-30 fontspec support of LuaTeX-ja
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
 (Font)              scaled to size 15.39551pt on input line 16.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
 (Font)              scaled to size 15.39551pt on input line 16.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/fontspec/fontspec.sty
 (/usr/local/texlive/2025/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-Package: xparse 2024-08-16 L3 Experimental document command parser
+Package: xparse 2025-10-09 L3 Experimental document command parser
 )
 Package: fontspec 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
 Lua module: fontspec 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
@@ -798,7 +799,7 @@ eX
 \l__fontspec_tmpc_dim=\dimen192
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2024/12/21 v2.1c Standard LaTeX package
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
 (Font)              scaled to size 9.6222pt on input line 116.
 )
@@ -817,7 +818,7 @@ LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 sty)
 (/usr/local/texlive/2025/texmf-dist/tex/luatex/luatexja/addons/luatexja-fontspe
 c-29e.sty
-Package: luatexja-fontspec-29e 2024-07-23 fontspec support of LuaTeX-ja
+Package: luatexja-fontspec-29e 2025-11-01 fontspec support of LuaTeX-ja
 \g__ltj_fontspec_altnumber_int=\count313
 ))
 
@@ -861,22 +862,22 @@ oFeatures={JFM=ujis},TateFeatures={JFM=ujisv},Script=CJK].
 (fontspec)             series/shapes:
 (fontspec)              
 
-LaTeX Font Info:    Redeclaring symbol font `mincho' on input line 737.
+LaTeX Font Info:    Redeclaring symbol font `mincho' on input line 775.
 LaTeX Font Info:    Overwriting symbol font `mincho' in version `normal'
 (Font)                  JY3/mc/m/n --> JY3/HaranoAjiMincho-Regular.otf(0)/m/n o
-n input line 737.
+n input line 775.
 LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
 (Font)                  JY3/gt/m/n --> JY3/HaranoAjiMincho-Regular.otf(0)/m/n o
-n input line 737.
+n input line 775.
 LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
 (Font)                  JY3/HaranoAjiMincho-Regular.otf(0)/m/n --> JY3/HaranoAj
-iMincho-Regular.otf(0)/b/n on input line 737.
+iMincho-Regular.otf(0)/b/n on input line 775.
 LaTeX Font Info:    Font shape `JT3/HaranoAjiMincho-Regular.otf(0)/m/n' will be
 
-(Font)              scaled to size 9.6222pt on input line 737.
+(Font)              scaled to size 9.6222pt on input line 775.
 LaTeX Font Info:    Font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/n' will be
 
-(Font)              scaled to size 9.6222pt on input line 737.
+(Font)              scaled to size 9.6222pt on input line 775.
 
 Package fontspec Info: 
 (fontspec)             HaranoAjiGothic-Medium scale = 0.96221923828125.
@@ -909,13 +910,13 @@ oFeatures={JFM=ujis},TateFeatures={JFM=ujisv},Script=CJK].
 (fontspec)             series/shapes:
 (fontspec)              
 
-LaTeX Font Info:    Redeclaring math alphabet \mathgt on input line 737.
+LaTeX Font Info:    Redeclaring math alphabet \mathgt on input line 775.
 LaTeX Font Info:    Overwriting math alphabet `\mathgt' in version `normal'
 (Font)                  JY3/gt/m/n --> JY3/HaranoAjiGothic-Medium.otf(0)/m/n on
- input line 737.
+ input line 775.
 LaTeX Font Info:    Overwriting math alphabet `\mathgt' in version `bold'
 (Font)                  JY3/gt/m/n --> JY3/HaranoAjiGothic-Medium.otf(0)/m/n on
- input line 737.
+ input line 775.
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -945,7 +946,7 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
 x
-\pgfutil@everybye=\toks28
+\pgfutil@everybye=\toks29
 \pgfutil@tempdima=\dimen195
 \pgfutil@tempdimb=\dimen196
 )
@@ -962,12 +963,12 @@ Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks29
-\pgfkeys@temptoks=\toks30
+\pgfkeys@pathtoks=\toks30
+\pgfkeys@temptoks=\toks31
 
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
 tered.code.tex
-\pgfkeys@tmptoks=\toks31
+\pgfkeys@tmptoks=\toks32
 ))
 \pgf@x=\dimen197
 \pgf@y=\dimen198
@@ -985,9 +986,9 @@ tered.code.tex
 \c@pgf@countb=\count315
 \c@pgf@countc=\count316
 \c@pgf@countd=\count317
-\t@pgf@toka=\toks32
-\t@pgf@tokb=\toks33
-\t@pgf@tokc=\toks34
+\t@pgf@toka=\toks33
+\t@pgf@tokb=\toks34
+\t@pgf@tokc=\toks35
 \pgf@sys@id@count=\count318
 
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
@@ -1043,9 +1044,9 @@ Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
 \pgfmath@dimen=\dimen263
 \pgfmath@count=\count322
 \pgfmath@box=\box73
-\pgfmath@toks=\toks35
-\pgfmath@stack@operand=\toks36
-\pgfmath@stack@operation=\toks37
+\pgfmath@toks=\toks36
+\pgfmath@stack@operand=\toks37
+\pgfmath@stack@operation=\toks38
 )
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
 tex)
@@ -1196,8 +1197,8 @@ Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
 Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
 \pgffor@iter=\dimen290
 \pgffor@skip=\dimen291
-\pgffor@stack=\toks38
-\pgffor@toks=\toks39
+\pgffor@stack=\toks39
+\pgffor@toks=\toks40
 ))
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
 e.tex
@@ -1273,11 +1274,11 @@ Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/tools/array.sty
-Package: array 2025/06/08 v2.6j Tabular extension package (FMi)
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \col@sep=\dimen315
 \ar@mcellbox=\box83
 \extrarowheight=\dimen316
-\NC@list=\toks40
+\NC@list=\toks41
 \extratabsurround=\skip54
 \backup@length=\skip55
 \ar@cellbox=\box84
@@ -1288,7 +1289,7 @@ Package: array 2025/06/08 v2.6j Tabular extension package (FMi)
 \TX@target=\dimen320
 \TX@delta=\dimen321
 \TX@cols=\count341
-\TX@ftn=\toks41
+\TX@ftn=\toks42
 )
 (/usr/local/texlive/2025/texmf-dist/tex/latex/eqparbox/eqparbox.sty
 Package: eqparbox 2017/09/03 v4.1 Create equal-widthed boxes
@@ -1304,7 +1305,7 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 (/usr/local/texlive/2025/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )
-\@envbody=\toks42
+\@envbody=\toks43
 ))
 (/usr/local/texlive/2025/texmf-dist/tex/latex/base/fixltx2e.sty
 Package: fixltx2e 2016/12/29 v2.1a fixes to LaTeX (obsolete)
@@ -1317,7 +1318,7 @@ Package fixltx2e Warning: fixltx2e is not required with releases after 2015
 
 Already applied: [0000/00/00] Old fixltx2e package on input line 53.
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2025/06/16 v2.17y AMS math features
+Package: amsmath 2025/07/09 v2.17z AMS math features
 \@mathmargin=\skip59
 
 For additional information on amsmath, use the `?' option.
@@ -1326,7 +1327,7 @@ Package: amstext 2024/11/17 v2.01 AMS text
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks43
+\@emptytoks=\toks44
 \ex@=\dimen322
 ))
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty
@@ -1366,23 +1367,23 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \dotsspace@=\muskip18
 \c@parentequation=\count349
 \dspbrk@lvl=\count350
-\tag@help=\toks44
+\tag@help=\toks45
 \row@=\count351
 \column@=\count352
 \maxfields@=\count353
-\andhelp@=\toks45
+\andhelp@=\toks46
 \eqnshift@=\dimen325
 \alignsep@=\dimen326
 \tagshift@=\dimen327
 \tagwidth@=\dimen328
 \totwidth@=\dimen329
 \lineht@=\dimen330
-\@envbody=\toks46
+\@envbody=\toks47
 \multlinegap=\skip60
 \multlinetaggap=\skip61
-\mathdisplay@stack=\toks47
-LaTeX Info: Redefining \[ on input line 2949.
-LaTeX Info: Redefining \] on input line 2950.
+\mathdisplay@stack=\toks48
+LaTeX Info: Redefining \[ on input line 2950.
+LaTeX Info: Redefining \] on input line 2951.
 )
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
@@ -1437,13 +1438,13 @@ les
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \rotheadsize=\dimen339
 \c@nlinenum=\count356
-\TeXr@lab=\toks48
+\TeXr@lab=\toks49
 )
 (/usr/local/texlive/2025/texmf-dist/tex/generic/ulem/ulem.sty
 \UL@box=\box89
 \UL@hyphenbox=\box90
 \UL@skip=\skip62
-\UL@hook=\toks49
+\UL@hook=\toks50
 \UL@height=\dimen340
 \UL@pe=\count357
 \UL@pixel=\dimen341
@@ -1483,7 +1484,7 @@ Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 \xmathstrut@dim=\dimen352
 )
 (/usr/local/texlive/2025/texmf-dist/tex/latex/tools/bm.sty
-Package: bm 2023/12/19 v1.2f Bold Symbol Support (DPC/FMi)
+Package: bm 2025/10/21 v1.2g Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup7
 \symboldletters=\mathgroup8
 \symboldsymbols=\mathgroup9
@@ -1508,7 +1509,7 @@ Package pict2e Info: Driver file for pict2e: p2e-luatex.def on input line 114.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/pict2e/p2e-luatex.def
 File: p2e-luatex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
 )
-\pIIe@GRAPH=\toks50
+\pIIe@GRAPH=\toks51
 \@arclen=\dimen353
 \@arcrad=\dimen354
 \pIIe@tempdima=\dimen355
@@ -1796,12 +1797,12 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 \scratchbox=\box94
 \nofMPsegments=\count368
 \nofMParguments=\count369
-\everyMPshowfont=\toks51
+\everyMPshowfont=\toks52
 \MPscratchCnt=\count370
 \MPscratchDim=\dimen362
 \MPnumerator=\count371
 \makeMPintoPDFobject=\count372
-\everyMPtoPDFconversion=\toks52
+\everyMPtoPDFconversion=\toks53
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1895,10 +1896,9 @@ undefined
 LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/sc' 
 undefined
 (Font)              No change on input line 111.
-
-
 LaTeX Font Info:    Trying loading font information for U+msa on input line 126
 .
+
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
@@ -1937,147 +1937,260 @@ undefined
 LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
 undefined
 (Font)              No change on input line 173.
-
-
-[1
+ [1
 Non-PDF special ignored!
 Non-PDF special ignored!{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updm
 ap/pdftex.map}
 
 
 ]
-
 LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
 undefined
 (Font)              No change on input line 192.
-
-
-[2<./fig/pipeline_and_concept.pdf><./fig/panorama_shift_concept.pdf><./fig/slidi
-ng_window_concept.pdf>]
+LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
+undefined
+(Font)              No change on input line 200.
+LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
+undefined
+(Font)              No change on input line 201.
+ [2<./fig/pipeline_and_concept.pdf><./fig/panorama_shift_concept.pdf><./fig/slid
+ing_window_concept.pdf>]
+LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
+undefined
+(Font)              No change on input line 211.
 LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
 undefined
 (Font)              No change on input line 214.
-
-
-LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/sc' 
-undefined
-(Font)              No change on input line 256.
 LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
 undefined
-(Font)              No change on input line 257.
+(Font)              No change on input line 223.
 LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
 undefined
-(Font)              No change on input line 275.
-
-
-[3]
-<fig/env_dkan1f_2way.pdf, id=80, 601.4972pt x 368.1253pt>
+(Font)              No change on input line 234.
+LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
+undefined
+(Font)              No change on input line 235.
+LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
+undefined
+(Font)              No change on input line 241.
+<fig/env_dkan1f_2way.pdf, id=75, 601.4972pt x 368.1253pt>
 File: fig/env_dkan1f_2way.pdf Graphic file (type pdf)
 <use fig/env_dkan1f_2way.pdf>
-Package luatex.def Info: fig/env_dkan1f_2way.pdf  used on input line 328.
+Package luatex.def Info: fig/env_dkan1f_2way.pdf  used on input line 259.
 (luatex.def)             Requested size: 226.79846pt x 138.80496pt.
-<fig/env_outdoor_crossroads.pdf, id=81, 614.295pt x 176.15813pt>
+<fig/env_outdoor_crossroads.pdf, id=76, 614.295pt x 176.15813pt>
 File: fig/env_outdoor_crossroads.pdf Graphic file (type pdf)
 <use fig/env_outdoor_crossroads.pdf>
-Package luatex.def Info: fig/env_outdoor_crossroads.pdf  used on input line 332
+Package luatex.def Info: fig/env_outdoor_crossroads.pdf  used on input line 263
 .
 (luatex.def)             Requested size: 226.79846pt x 65.0377pt.
-<fig/ex_ld_dkan1fjuuji3_simple.pdf, id=82, 246.4407pt x 213.1965pt>
-File: fig/ex_ld_dkan1fjuuji3_simple.pdf Graphic file (type pdf)
-<use fig/ex_ld_dkan1fjuuji3_simple.pdf>
-Package luatex.def Info: fig/ex_ld_dkan1fjuuji3_simple.pdf  used on input line 
-347.
-(luatex.def)             Requested size: 129.0pt x 111.598pt.
-<fig/ex_ld_dkan1fjuuji3_simple_with_shift.pdf, id=83, 255.8358pt x 213.1965pt>
-File: fig/ex_ld_dkan1fjuuji3_simple_with_shift.pdf Graphic file (type pdf)
-<use fig/ex_ld_dkan1fjuuji3_simple_with_shift.pdf>
-Package luatex.def Info: fig/ex_ld_dkan1fjuuji3_simple_with_shift.pdf  used on 
-input line 348.
-(luatex.def)             Requested size: 129.0pt x 107.50233pt.
-<fig/ex_ld_dkan1fjuuji3_spatial.pdf, id=84, 455.301pt x 213.1965pt>
-File: fig/ex_ld_dkan1fjuuji3_spatial.pdf Graphic file (type pdf)
-<use fig/ex_ld_dkan1fjuuji3_spatial.pdf>
-Package luatex.def Info: fig/ex_ld_dkan1fjuuji3_spatial.pdf  used on input line
- 349.
-(luatex.def)             Requested size: 232.19843pt x 108.72551pt.
+<fig/env_dkan_outdoor_inverse.pdf, id=77, 614.295pt x 385.44pt>
+File: fig/env_dkan_outdoor_inverse.pdf Graphic file (type pdf)
+<use fig/env_dkan_outdoor_inverse.pdf>
+Package luatex.def Info: fig/env_dkan_outdoor_inverse.pdf  used on input line 2
+67.
+(luatex.def)             Requested size: 226.79846pt x 142.30473pt.
+LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/sc' 
+undefined
+(Font)              No change on input line 275.
+LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
+undefined
+(Font)              No change on input line 276.
+ [3<./fig/env_dkan1f_2way.pdf><./fig/env_outdoor_crossroads.pdf><./fig/env_dkan_
+outdoor_inverse.pdf>]
+LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
+undefined
+(Font)              No change on input line 295.
+<fig/ex_sim_panorama_shift_off.pdf, id=152, 963.6pt x 284.56313pt>
+File: fig/ex_sim_panorama_shift_off.pdf Graphic file (type pdf)
+<use fig/ex_sim_panorama_shift_off.pdf>
+Package luatex.def Info: fig/ex_sim_panorama_shift_off.pdf  used on input line 
+336.
+(luatex.def)             Requested size: 252.0pt x 74.41887pt.
+<fig/ex_sim_panorama_shift_on.pdf, id=153, 963.6pt x 284.56313pt>
+File: fig/ex_sim_panorama_shift_on.pdf Graphic file (type pdf)
+<use fig/ex_sim_panorama_shift_on.pdf>
+Package luatex.def Info: fig/ex_sim_panorama_shift_on.pdf  used on input line 3
+41.
+(luatex.def)             Requested size: 252.0pt x 74.41887pt.
 
-Overfull \hbox (28.28496pt too wide) in paragraph at lines 346--352
+Overfull \hbox (12.00002pt too wide) in paragraph at lines 335--345
  [][][][] 
  []
 
-<fig/ex_ld_reverse_direction_simple.pdf, id=85, 265.9536pt x 213.1965pt>
+
+Overfull \hbox (12.00002pt too wide) in paragraph at lines 335--345
+ [][][] 
+ []
+
+LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
+undefined
+(Font)              No change on input line 351.
+LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
+undefined
+(Font)              No change on input line 353.
+LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
+undefined
+(Font)              No change on input line 359.
+LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
+undefined
+(Font)              No change on input line 365.
+LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
+undefined
+(Font)              No change on input line 371.
+LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
+undefined
+(Font)              No change on input line 372.
+LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
+undefined
+(Font)              No change on input line 372.
+LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
+undefined
+(Font)              No change on input line 372.
+[4<./fig/ex_sim_panorama_shift_off.pdf><./fig/ex_sim_panorama_shift_on.pdf>]
+<fig/ex_add_node_dkanjuuji3.pdf, id=179, 614.295pt x 211.54031pt>
+File: fig/ex_add_node_dkanjuuji3.pdf Graphic file (type pdf)
+<use fig/ex_add_node_dkanjuuji3.pdf>
+Package luatex.def Info: fig/ex_add_node_dkanjuuji3.pdf  used on input line 405
+.
+(luatex.def)             Requested size: 226.79846pt x 78.10083pt.
+<fig/ex_add_node_reverse_direction.pdf, id=180, 614.295pt x 211.54031pt>
+File: fig/ex_add_node_reverse_direction.pdf Graphic file (type pdf)
+<use fig/ex_add_node_reverse_direction.pdf>
+Package luatex.def Info: fig/ex_add_node_reverse_direction.pdf  used on input l
+ine 409.
+(luatex.def)             Requested size: 226.79846pt x 78.10083pt.
+<fig/ex_add_node_outdoor_crossroads.pdf, id=181, 555.57562pt x 178.41656pt>
+File: fig/ex_add_node_outdoor_crossroads.pdf Graphic file (type pdf)
+<use fig/ex_add_node_outdoor_crossroads.pdf>
+Package luatex.def Info: fig/ex_add_node_outdoor_crossroads.pdf  used on input 
+line 413.
+(luatex.def)             Requested size: 226.79846pt x 72.83273pt.
+<fig/ex_add_node_outdoor_invverse.pdf, id=182, 326.72063pt x 211.54031pt>
+File: fig/ex_add_node_outdoor_invverse.pdf Graphic file (type pdf)
+<use fig/ex_add_node_outdoor_invverse.pdf>
+Package luatex.def Info: fig/ex_add_node_outdoor_invverse.pdf  used on input li
+ne 417.
+(luatex.def)             Requested size: 226.79846pt x 146.84416pt.
+<fig/ex_ld_dkan1fjuuji3_simple.pdf, id=183, 246.4407pt x 213.1965pt>
+File: fig/ex_ld_dkan1fjuuji3_simple.pdf Graphic file (type pdf)
+<use fig/ex_ld_dkan1fjuuji3_simple.pdf>
+Package luatex.def Info: fig/ex_ld_dkan1fjuuji3_simple.pdf  used on input line 
+427.
+(luatex.def)             Requested size: 129.0pt x 111.598pt.
+<fig/ex_ld_dkan1fjuuji3_simple_with_shift.pdf, id=184, 255.8358pt x 213.1965pt>
+
+File: fig/ex_ld_dkan1fjuuji3_simple_with_shift.pdf Graphic file (type pdf)
+<use fig/ex_ld_dkan1fjuuji3_simple_with_shift.pdf>
+Package luatex.def Info: fig/ex_ld_dkan1fjuuji3_simple_with_shift.pdf  used on 
+input line 428.
+(luatex.def)             Requested size: 129.0pt x 107.50233pt.
+<fig/ex_ld_dkan1fjuuji3_spatial.pdf, id=185, 455.301pt x 213.1965pt>
+File: fig/ex_ld_dkan1fjuuji3_spatial.pdf Graphic file (type pdf)
+<use fig/ex_ld_dkan1fjuuji3_spatial.pdf>
+Package luatex.def Info: fig/ex_ld_dkan1fjuuji3_spatial.pdf  used on input line
+ 429.
+(luatex.def)             Requested size: 232.19843pt x 108.72551pt.
+
+Overfull \hbox (28.28496pt too wide) in paragraph at lines 426--432
+ [][][][] 
+ []
+
+<fig/ex_ld_reverse_direction_simple.pdf, id=186, 265.9536pt x 213.1965pt>
 File: fig/ex_ld_reverse_direction_simple.pdf Graphic file (type pdf)
 <use fig/ex_ld_reverse_direction_simple.pdf>
 Package luatex.def Info: fig/ex_ld_reverse_direction_simple.pdf  used on input 
-line 357.
+line 437.
 (luatex.def)             Requested size: 129.0pt x 103.41318pt.
-<fig/ex_ld_reverse_direction_simple_with_shift.pdf, id=86, 247.8861pt x 213.196
-5pt>
+<fig/ex_ld_reverse_direction_simple_with_shift.pdf, id=187, 247.8861pt x 213.19
+65pt>
 File: fig/ex_ld_reverse_direction_simple_with_shift.pdf Graphic file (type pdf)
 
 <use fig/ex_ld_reverse_direction_simple_with_shift.pdf>
 Package luatex.def Info: fig/ex_ld_reverse_direction_simple_with_shift.pdf  use
-d on input line 358.
+d on input line 438.
 (luatex.def)             Requested size: 129.0pt x 110.95064pt.
-<fig/ex_ld_reverse_direction_spatial.pdf, id=87, 505.1673pt x 213.1965pt>
+<fig/ex_ld_reverse_direction_spatial.pdf, id=188, 505.1673pt x 213.1965pt>
 File: fig/ex_ld_reverse_direction_spatial.pdf Graphic file (type pdf)
 <use fig/ex_ld_reverse_direction_spatial.pdf>
 Package luatex.def Info: fig/ex_ld_reverse_direction_spatial.pdf  used on input
- line 359.
+ line 439.
 (luatex.def)             Requested size: 232.19843pt x 97.99675pt.
 
-Overfull \hbox (28.28496pt too wide) in paragraph at lines 356--362
+Overfull \hbox (28.28496pt too wide) in paragraph at lines 436--442
  [][][][] 
  []
 
-<fig/ex_ld_outdoor_crossroads_simple.pdf, id=88, 257.2812pt x 213.1965pt>
+<fig/ex_ld_outdoor_crossroads_simple.pdf, id=189, 257.2812pt x 213.1965pt>
 File: fig/ex_ld_outdoor_crossroads_simple.pdf Graphic file (type pdf)
 <use fig/ex_ld_outdoor_crossroads_simple.pdf>
 Package luatex.def Info: fig/ex_ld_outdoor_crossroads_simple.pdf  used on input
- line 367.
+ line 447.
 (luatex.def)             Requested size: 129.0pt x 106.90051pt.
-<fig/ex_ld_outdoor_crossroads_simple_with_shift.pdf, id=89, 250.7769pt x 213.19
-65pt>
+<fig/ex_ld_outdoor_crossroads_simple_with_shift.pdf, id=190, 250.7769pt x 213.1
+965pt>
 File: fig/ex_ld_outdoor_crossroads_simple_with_shift.pdf Graphic file (type pdf
 )
 <use fig/ex_ld_outdoor_crossroads_simple_with_shift.pdf>
 Package luatex.def Info: fig/ex_ld_outdoor_crossroads_simple_with_shift.pdf  us
-ed on input line 368.
+ed on input line 448.
 (luatex.def)             Requested size: 129.0pt x 109.67216pt.
-<fig/ex_ld_outdoor_crossroads_spatial.pdf, id=90, 480.5955pt x 213.1965pt>
+<fig/ex_ld_outdoor_crossroads_spatial.pdf, id=191, 480.5955pt x 213.1965pt>
 File: fig/ex_ld_outdoor_crossroads_spatial.pdf Graphic file (type pdf)
 <use fig/ex_ld_outdoor_crossroads_spatial.pdf>
 Package luatex.def Info: fig/ex_ld_outdoor_crossroads_spatial.pdf  used on inpu
-t line 369.
+t line 449.
 (luatex.def)             Requested size: 232.19843pt x 103.00328pt.
 
-Overfull \hbox (28.28496pt too wide) in paragraph at lines 366--372
+Overfull \hbox (28.28496pt too wide) in paragraph at lines 446--452
+ [][][][] 
+ []
+
+<fig/ex_ld_outdoor_inverse_simple.pdf, id=192, 161.8848pt x 213.1965pt>
+File: fig/ex_ld_outdoor_inverse_simple.pdf Graphic file (type pdf)
+<use fig/ex_ld_outdoor_inverse_simple.pdf>
+Package luatex.def Info: fig/ex_ld_outdoor_inverse_simple.pdf  used on input li
+ne 457.
+(luatex.def)             Requested size: 103.19843pt x 135.90852pt.
+<fig/ex_ld_outdoor_inverse_simple_with_shift.pdf, id=193, 161.8848pt x 213.1965
+pt>
+File: fig/ex_ld_outdoor_inverse_simple_with_shift.pdf Graphic file (type pdf)
+<use fig/ex_ld_outdoor_inverse_simple_with_shift.pdf>
+Package luatex.def Info: fig/ex_ld_outdoor_inverse_simple_with_shift.pdf  used 
+on input line 458.
+(luatex.def)             Requested size: 103.19843pt x 135.90852pt.
+<fig/ex_ld_outdoor_inverse_spatial.pdf, id=194, 385.1991pt x 213.1965pt>
+File: fig/ex_ld_outdoor_inverse_spatial.pdf Graphic file (type pdf)
+<use fig/ex_ld_outdoor_inverse_spatial.pdf>
+Package luatex.def Info: fig/ex_ld_outdoor_inverse_spatial.pdf  used on input l
+ine 459.
+(luatex.def)             Requested size: 232.19843pt x 128.51744pt.
+
+Overfull \hbox (2.48338pt too wide) in paragraph at lines 456--462
  [][][][] 
  []
 
 LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/sc' 
 undefined
-(Font)              No change on input line 387.
+(Font)              No change on input line 467.
 LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/sc' 
 undefined
-(Font)              No change on input line 396.
+(Font)              No change on input line 476.
 LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/sc' 
 undefined
-(Font)              No change on input line 399.
+(Font)              No change on input line 479.
 LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
 undefined
-(Font)              No change on input line 408.
+(Font)              No change on input line 488.
 LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
 undefined
-(Font)              No change on input line 412.
+(Font)              No change on input line 492.
 LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
 undefined
-(Font)              No change on input line 417.
-
-
+(Font)              No change on input line 497.
 LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
 undefined
-(Font)              No change on input line 422.
+(Font)              No change on input line 502.
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -2089,18 +2202,12 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-
-
-[4<./fig/env_dkan1f_2way.pdf><./fig/env_outdoor_crossroads.pdf>] [5<./fig/ex_ld_
-dkan1fjuuji3_simple.pdf><./fig/ex_ld_dkan1fjuuji3_simple_with_shift.pdf><./fig/e
-x_ld_dkan1fjuuji3_spatial.pdf><./fig/ex_ld_reverse_direction_simple.pdf><./fig/e
-x_ld_reverse_direction_simple_with_shift.pdf><./fig/ex_ld_reverse_direction_spat
-ial.pdf><./fig/ex_ld_outdoor_crossroads_simple.pdf><./fig/ex_ld_outdoor_crossroa
-ds_simple_with_shift.pdf><./fig/ex_ld_outdoor_crossroads_spatial.pdf>]
+[5<./fig/ex_add_node_dkanjuuji3.pdf><./fig/ex_add_node_reverse_direction.pdf><./
+fig/ex_add_node_outdoor_crossroads.pdf><./fig/ex_add_node_outdoor_invverse.pdf>] [6<./fig/ex_ld_dkan1fjuuji3_simple.pdf><./fig/ex_ld_dkan1fjuuji3_simple_with_shift.pdf><./fig/ex_ld_dkan1fjuuji3_spatial.pdf><./fig/ex_ld_reverse_direction_simple.pdf><./fig/ex_ld_reverse_direction_simple_with_shift.pdf><./fig/ex_ld_reverse_direction_spatial.pdf><./fig/ex_ld_outdoor_crossroads_simple.pdf><./fig/ex_ld_outdoor_crossroads_simple_with_shift.pdf><./fig/ex_ld_outdoor_crossroads_spatial.pdf><./fig/ex_ld_outdoor_inverse_simple.pdf><./fig/ex_ld_outdoor_inverse_simple_with_shift.pdf><./fig/ex_ld_outdoor_inverse_spatial.pdf>]
 (./out/conference_101719.aux)
  ***********
-LaTeX2e <2025-06-01> patch level 1
-L3 programming layer <2025-09-02>
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
  ***********
 
 
@@ -2109,16 +2216,16 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 )
 
 Here is how much of LuaTeX's memory you used:
- 22916 strings out of 476291
- 382252,953878 words of node,token memory allocated
- 1070 words of node memory still in use:
-   11 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 192 attribute, 60 glue_sp
-ec, 29 attribute_list, 1 write, 14 user_defined nodes
-   avail lists: 1:26,2:98245,3:712,4:572,5:379,6:71,7:15306,8:16,9:4861,10:22,11
+ 23028 strings out of 476081
+ 382242,953878 words of node,token memory allocated
+ 1094 words of node memory still in use:
+   11 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 203 attribute, 60 glue_sp
+ec, 30 attribute_list, 1 write, 14 user_defined nodes
+   avail lists: 1:35,2:92195,3:698,4:572,5:379,6:71,7:15306,8:16,9:4621,10:24,11
 :522
- 44435 multiletter control sequences out of 65536+600000
+ 44727 multiletter control sequences out of 65536+600000
  114 fonts using 117704039 bytes
- 107i,12n,122p,1769b,499s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 107i,12n,122p,2037b,507s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman8-italic.otf
 ></usr/local/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.o
 tf></usr/local/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.o
@@ -2139,10 +2246,10 @@ ist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on conference_101719.pdf (5 pages, 1607070 bytes).
+Output written on conference_101719.pdf (6 pages, 3697136 bytes).
 
-PDF statistics: 268 PDF objects out of 1000 (max. 8388607)
- 134 compressed objects within 2 object streams
+PDF statistics: 351 PDF objects out of 1000 (max. 8388607)
+ 160 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)
 
