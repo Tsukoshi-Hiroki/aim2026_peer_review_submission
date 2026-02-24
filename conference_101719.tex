@@ -131,11 +131,33 @@ Topological Map, Visual Place Recognition, Panoramic Image
 % \section{Ease of Use}
 \section{関連研究}
 
-トポロジカルマップは，環境をノードとアークからなるグラフ構造として抽象的に表現する手法である．
-このような表現は，環境変化に対する頑健性や計算効率の面で優れており，経路計画および自律移動において有効であることが示されている\cite{ref:Metric-Topological}.
-さらに，人間の空間認知においてもトポロジカル構造に基づく認知地図の存在が示唆されており，ロボティクスへの応用が進められている\cite{ref:The-Spatial-Semantic-Hierarchy}．
-本稿では，これらの利点を活かしつつ，全周パノラマ画像の方位の特性と空間的一貫性チェックに基づくトポロジカルマップの構築手法を提案する．
-% \subsection{Maintaining the Integrity of the Specifications}
+% トポロジカルマップは，環境をノードとアークからなるグラフ構造として抽象的に表現する手法である．
+% このような表現は，環境変化に対する頑健性や計算効率の面で優れており，経路計画および自律移動において有効であることが示されている\cite{ref:Metric-Topological}.
+% さらに，人間の空間認知においてもトポロジカル構造に基づく認知地図の存在が示唆されており，ロボティクスへの応用が進められている\cite{ref:The-Spatial-Semantic-Hierarchy}．
+% 本稿では，これらの利点を活かしつつ，全周パノラマ画像の方位の特性と空間的一貫性チェックに基づくトポロジカルマップの構築手法を提案する．
+\subsection{ロボティクスにおけるトポロジカルマップ}
+ロボティクスにおける地図としての環境情報は，メトリックマップとトポロジカルマップの2種類に大別される．
+メトリックマップは環境を座標系上で精密に表現するため高精度な自己位置推定が可能であるが，環境の規模が大きくなるほど経路計画などに要する計算コストやメモリ使用量が増大する．
+また，物体が移動・変化し環境が大きく変化する場合はマップの再構築が必要であり，環境変化に対して頑健とは言えない．
+一方，トポロジカルマップは環境を特徴的な場所（ノード）とそれらの接続（アーク）によるグラフ構造で抽象的に表現する手法である．
+このような表現は，計算効率や環境変化に対する頑健性の面で優れており，経路計画および自律移動において有効であり，人間の空間認知においてもトポロジカル構造に基づく認知地図の存在が示唆され，ロボティクスへの応用が進められている．\cite{ref:The-Spatial-Semantic-Hierarchy}\cite{ref:Metric-Topological}\cite{ref:Navigation-in-hybrid-metric-topological-maps}
+
+Kuipers らは認知地図（Cognitive Map）の概念をロボットの空間表現に取り入れ，環境を複数の抽象レベルで捉える Spatial Semantic Hierarchy（SSH）を提案した．\cite{ref:The-Spatial-Semantic-Hierarchy}
+
+また Thrun は，グリッドマップの幾何学的な精密さと，トポロジカルマップの計算効率の高さを統合したハイブリッドな地図構築手法を提案した．
+このメトリック・トポロジカルマップは,詳細な幾何情報と高次の抽象表現を両立させた地図表現を実現している．\cite{ref:Metric-Topological}
+
+Konolige らもメトリック・トポロジカルマップを用いたナビゲーション手法を提案している．
+小領域のメトリックな局所地図による局所的なナビゲーションとトポロジカルグラフによる大域的な経路計画を行うことで，詳細な幾何情報に常時依存する必要はないことを示唆している．\cite{ref:Navigation-in-hybrid-metric-topological-maps}
+
+\subsection{Visual Place Recognition}
+Visual Place Recognition（VPR）は，画像を用いて一度訪れた地点を認識する技術である．
+初期の VPR は，SIFT や SURF などの local descriptor を bag-of-words[] や VLAD[] により固定長ベクトルに変換し，画像検索タスクに拡張する形式が取られていた．
+その後，NetVLAD[] や GeM[]，CosPlace[]，AnyLoc\cite{ref:AnyLoc} といった深層学習ベースの手法が登場し，高い性能を発揮している．
+
+前稿\cite{ref:robosym_ogiwara}では入力画像をパノラマ画像， VPR 手法として多種多様な環境で高い性能を発揮している AnyLoc\cite{ref:AnyLoc} を用いてトポロジカルマップの構築を行った．
+しかし，再訪地点が交差・逆方向の場合においては画像を構成する物体の位置関係が異なることで，真に同一な地点においても視覚的類似度の低下が発生しループ検出ができない場合があった．
+本稿では，パノラマシフトによるパノラマ画像の切れ目の変更を行うことで上記問題の解決を図る．
 
 
 \section{視覚場所認識によるトポロジカルマップの構築}
@@ -491,15 +513,20 @@ Takaya Nakao, Yoshitaka Hara, and Yoji Kuroda,
   Nikhil Keetha, Avneesh Mishra, Jay Karhade, Krishna Murthy Jatavallabhula, Sebastian Scherer, Madhava Krishna, and Sourav Garg: ``AnyLoc: Towards Universal Visual Place Recognition'',
   \textit{IEEE Robotics and Automation Letters}, vol. 9, no. 2, pp. 1286--1293, 2023.
 
+\bibitem{ref:The-Spatial-Semantic-Hierarchy}
+  Benjamin Kuipers:
+  ``The Spatial Semantic Hierarchy'',
+  \textit{Artiﬁcial Intelligence},vol. 119, no. 1-2, pp. 191--233, 2000.
+
 \bibitem{ref:Metric-Topological}
   Sebastian Thrun:
   ``Learning Metric-Topological Maps for Indoor Mobile Robot Navigation'',
   \textit{Artiﬁcial Intelligence},vol. 99, no. 1, pp. 21--71, 1998.
 
-\bibitem{ref:The-Spatial-Semantic-Hierarchy}
-  Benjamin Kuipers:
-  ``The Spatial Semantic Hierarchy'',
-  \textit{Artiﬁcial Intelligence},vol. 119, no. 1-2, pp. 191--233, 2000.
+\bibitem{ref:Navigation-in-hybrid-metric-topological-maps}
+  Kurt Konolige, Eitan Marder-Eppstein, and Bhaskara Marthi:
+  ``Navigation in Hybrid Metric-Topological Maps'',
+  \textit{Proc. of IEEE Int. Conf. on Robotics and Automation (ICRA)}, 2011.
 
 % \bibitem{ref:ndt}
 %   P. Biber, and W. Strasser: 

@@ -1,4 +1,4 @@
-PWD /Users/tsuko/latex_ws/aim2026_peer_review_submission
+PWD /home/amsl/latex_ws/src/AIM2026
 INPUT /usr/local/texlive/2025/texmf-var/web2c/luahbtex/lualatex.fmt
 INPUT ./conference_101719.tex
 OUTPUT out/conference_101719.log
@@ -319,14 +319,14 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr7.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr5.tfm
-INPUT ./fig/pipeline_and_concept.pdf
-INPUT ./fig/pipeline_and_concept.pdf
-INPUT ./fig/panorama_shift_concept.pdf
-INPUT ./fig/panorama_shift_concept.pdf
-INPUT ./fig/sliding_window_concept.pdf
-INPUT ./fig/sliding_window_concept.pdf
 OUTPUT out/conference_101719.pdf
 INPUT /usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT ./fig/pipeline_and_concept.pdf
+INPUT ./fig/pipeline_and_concept.pdf
+INPUT ./fig/panorama_shift_concept.pdf
+INPUT ./fig/panorama_shift_concept.pdf
+INPUT ./fig/sliding_window_concept.pdf
+INPUT ./fig/sliding_window_concept.pdf
 INPUT ./fig/env_dkan1f_2way.pdf
 INPUT ./fig/env_dkan1f_2way.pdf
 INPUT ./fig/env_outdoor_crossroads.pdf
