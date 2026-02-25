@@ -152,8 +152,8 @@ Konolige らもメトリック・トポロジカルマップを用いたナビ�
 
 \subsection{Visual Place Recognition}
 Visual Place Recognition（VPR）は，画像を用いて一度訪れた地点を認識する技術である．
-初期の VPR は，SIFT や SURF などの local descriptor を bag-of-words[] や VLAD[] により固定長ベクトルに変換し，画像検索タスクに拡張する形式が取られていた．
-その後，NetVLAD[] や GeM[]，CosPlace[]，AnyLoc\cite{ref:AnyLoc} といった深層学習ベースの手法が登場し，高い性能を発揮している．
+初期の VPR は，SIFT や SURF などの local descriptor を bag-of-words\cite{ref:bag-of-words} や VLAD\cite{ref:VLAD} により固定長ベクトルに変換し，画像検索タスクに拡張する形式が取られていた．
+その後，NetVLAD\cite{ref:NetVLAD} や GeM\cite{ref:GeM}，CosPlace\cite{ref:CosPlace}，AnyLoc\cite{ref:AnyLoc} といった深層学習ベースの手法が登場し，高い性能を発揮している．
 
 前稿\cite{ref:robosym_ogiwara}では入力画像をパノラマ画像， VPR 手法として多種多様な環境で高い性能を発揮している AnyLoc\cite{ref:AnyLoc} を用いてトポロジカルマップの構築を行った．
 しかし，再訪地点が交差・逆方向の場合においては画像を構成する物体の位置関係が異なることで，真に同一な地点においても視覚的類似度の低下が発生しループ検出ができない場合があった．
@@ -527,6 +527,31 @@ Takaya Nakao, Yoshitaka Hara, and Yoji Kuroda,
   Kurt Konolige, Eitan Marder-Eppstein, and Bhaskara Marthi:
   ``Navigation in Hybrid Metric-Topological Maps'',
   \textit{Proc. of IEEE Int. Conf. on Robotics and Automation (ICRA)}, 2011.
+
+\bibitem{ref:bag-of-words}
+  James Philbin, Ondrej Chum, Michael Isard, Josef Sivic, and Andrew Zisserman:
+  ``Object Retrieval with Large Vocabularies and Fast Spatial Matching'',
+  \textit{Proc. of IEEE Int. Conf. on Computer Vision and Pattern Recognition (CVPR)}, 2007.
+
+\bibitem{ref:VLAD}
+  Hervé Jégou, Matthijs Douze, Cordelia Schmid, and Patrick Pérez:
+  ``Aggregating Local Descriptors into a Compact Image Representation'',
+  \textit{IEEE Computer Society Conf. on Computer Vision and Pattern Recognition(CVPR)}, 2010.
+
+\bibitem{ref:NetVLAD}
+  Relja Arandjelović, Petr Gronat, Akihiko Torii, Tomas Pajdla, and Josef Sivic:
+  ``NetVLAD: CNN Architecture for Weakly Supervised Place Recognition'',
+  \textit{IEEE Conf. on Computer Vision and Pattern Recognition (CVPR)}, 2016.
+
+\bibitem{ref:GeM}
+  Filip Radenović, Giorgos Tolias, and Ondrej Chum:
+  ``Fine-Tuning CNN Image Retrieval with No Human Annotation'',
+  \textit{IEEE Trans. on Pattern Analysis and Machine Intelligence}, vol. 41, no. 7, pp. 1655-1668, 2019.
+
+\bibitem{ref:CosPlace}
+  Gabriele Berton, Carlo Masone, and Barbara Caputo:
+  ``Rethinking Visual Geo-localization for Large-Scale Applications'',
+  \textit{IEEE/CVF Conf. on Computer Vision and Pattern Recognition (CVPR)}, 2022.
 
 % \bibitem{ref:ndt}
 %   P. Biber, and W. Strasser: 

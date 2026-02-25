@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2025.10.5)  24 FEB 2026 11:42
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2025.10.5)  25 FEB 2026 10:43
  restricted system commands enabled.
  file:line:error style messages enabled.
 **conference_101719.tex
@@ -2221,6 +2221,21 @@ undefined
 LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
 undefined
 (Font)              No change on input line 529.
+LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
+undefined
+(Font)              No change on input line 534.
+LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
+undefined
+(Font)              No change on input line 539.
+LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
+undefined
+(Font)              No change on input line 544.
+LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
+undefined
+(Font)              No change on input line 549.
+LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
+undefined
+(Font)              No change on input line 554.
 
 
 ** Conference Paper **
@@ -2251,14 +2266,14 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 )
 
 Here is how much of LuaTeX's memory you used:
- 23023 strings out of 476291
+ 23028 strings out of 476291
  382245,953878 words of node,token memory allocated
  1094 words of node memory still in use:
    11 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 203 attribute, 60 glue_sp
 ec, 30 attribute_list, 1 write, 14 user_defined nodes
-   avail lists: 1:26,2:99046,3:726,4:528,5:386,6:61,7:15679,8:16,9:4897,10:25,11
+   avail lists: 1:26,2:99287,3:736,4:528,5:386,6:61,7:15679,8:16,9:4897,10:25,11
 :547
- 44512 multiletter control sequences out of 65536+600000
+ 44517 multiletter control sequences out of 65536+600000
  114 fonts using 117704039 bytes
  107i,12n,122p,1769b,503s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman8-italic.otf
@@ -2281,7 +2296,7 @@ ist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on conference_101719.pdf (7 pages, 3711139 bytes).
+Output written on conference_101719.pdf (7 pages, 3713686 bytes).
 
 PDF statistics: 354 PDF objects out of 1000 (max. 8388607)
  162 compressed objects within 2 object streams
