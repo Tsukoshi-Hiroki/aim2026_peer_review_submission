@@ -20,6 +20,7 @@
 \usepackage{multirow}% 表の縦二段をつなげる \multirow コマンド
 \usepackage{tabularx}% 横幅を指定可能な表の tabularx 環境
 \usepackage{eqparbox}% 自動的に同じ幅に調整されるボックス（表など）の \eq par box コマンド
+\usepackage[geometry]{ifsym}
 \usepackage{fixltx2e}
 \usepackage{array}
 \usepackage[cmex10]{amsmath}% AMS の数式環境（amstext.sty, amsopn.sty, amsbsy.sty を含む），cmex10 オプションでビットマップフォントの埋め込みを防ぐ
@@ -485,6 +486,26 @@ Query 画像と Target 画像は，図\ref{fig:env_images}(b)の走行経路に�
   \label{fig:ex_ld_outdoor_inverse}
 
 \end{figure*}
+
+\begin{table*}[t]
+  \centering
+  \small
+  \caption{定量評価：屋内交差}
+  \label{table:loop_detection_eval}%\vspace*{-2mm}
+  \begin{tabular}{cccc}
+  \toprule%[0.08em]  % デフォルト 0.08em（\heavyrulewidth）
+  & \textbf{Thresholding} & \textbf{with Panorama Shift} & \textbf{Ours}\\
+  \midrule%[0.05em]  % デフォルト 0.05em（\lightrulewidth）
+  TP & 14 & 18 & 9\\
+  FP  & 16 & 34 & 0\\
+  TN & 72 & 58 & 81\\
+  FN  &  &  &  \\
+  Precision  &  &  & \\
+  Accuracy  &  &  & \\
+  F1 Score  &  &  & \\
+  \bottomrule%[0.08em]  % デフォルト 0.08em（\heavyrulewidth）
+  \end{tabular}
+\end{table*}
 
 \section{結言}
 
