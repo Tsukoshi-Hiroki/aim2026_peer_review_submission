@@ -60,6 +60,7 @@
 \usepackage{graphicx}
 \usepackage{textcomp}
 \usepackage{xcolor}
+\usepackage{orcidlink}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
 T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
@@ -76,20 +77,21 @@ and Spatial Consistency Check\\
 
 \author{\IEEEauthorblockN{Hiroki Tsukoshi}
 \IEEEauthorblockA{\textit{Graduate School of Science and} \\
-\textit{Technology},
-\textit{Meiji University},\\
-Kanagawa, Japan}
+\textit{Technology, Meiji University,}\\
+Kanagawa, Japan \\
+}
 \and
 \IEEEauthorblockN{Yoshitaka Hara}
-\IEEEauthorblockA{\textit{Future Robotics Technology Center(fuRo)},\\
-\textit{Chiba Institute of Technology},\\
-Chiba, Japan}
+\IEEEauthorblockA{\textit{Future Robotics Technology Center} \\
+\textit{(fuRo), Chiba Institute of Technology,}\\
+Chiba, Japan \\
+0000-0002-8667-1061}
 \and
 \IEEEauthorblockN{Yoji Kuroda}
-\IEEEauthorblockA{\textit{School of Science and}\\
-\textit{Technology},
-\textit{Meiji University}\\
-Kanagawa, Japan}
+\IEEEauthorblockA{\textit{School of Science and} \\
+\textit{Technology, Meiji University,}\\
+Kanagawa, Japan \\
+ORCID}
 }
 
 \maketitle
@@ -141,24 +143,25 @@ Topological Map, Visual Place Recognition, Panoramic Image
 メトリックマップは環境を座標系上で精密に表現するため高精度な自己位置推定が可能であるが，環境の規模が大きくなるほど経路計画などに要する計算コストやメモリ使用量が増大する．
 また，物体が移動・変化し環境が大きく変化する場合はマップの再構築が必要であり，環境変化に対して頑健とは言えない．
 一方，トポロジカルマップは環境を特徴的な場所（ノード）とそれらの接続（アーク）によるグラフ構造で抽象的に表現する手法である．
-このような表現は，計算効率や環境変化に対する頑健性の面で優れており，経路計画および自律移動において有効であり，人間の空間認知においてもトポロジカル構造に基づく認知地図の存在が示唆され，ロボティクスへの応用が進められている．\cite{ref:The-Spatial-Semantic-Hierarchy}\cite{ref:Metric-Topological}\cite{ref:Navigation-in-hybrid-metric-topological-maps}
+このような表現は，計算効率や環境変化に対する頑健性の面で優れており，経路計画および自律移動において有効であり，人間の空間認知においてもトポロジカル構造に基づく認知地図の存在が示唆され，ロボティクスへの応用が進められている\cite{ref:The-Spatial-Semantic-Hierarchy}\cite{ref:Metric-Topological}\cite{ref:Navigation-in-hybrid-metric-topological-maps}．
 
-Kuipers らは認知地図（Cognitive Map）の概念をロボットの空間表現に取り入れ，環境を複数の抽象レベルで捉える Spatial Semantic Hierarchy（SSH）を提案した．\cite{ref:The-Spatial-Semantic-Hierarchy}
+Kuipers ら\cite{ref:The-Spatial-Semantic-Hierarchy}は，認知地図（Cognitive Map）の概念をロボットの空間表現に取り入れ，環境を複数の抽象レベルで捉える Spatial Semantic Hierarchy（SSH）を提案した．
 
-また Thrun は，グリッドマップの幾何学的な精密さと，トポロジカルマップの計算効率の高さを統合したハイブリッドな地図構築手法を提案した．
-このメトリック・トポロジカルマップは,詳細な幾何情報と高次の抽象表現を両立させた地図表現を実現している．\cite{ref:Metric-Topological}
+また Thrun \cite{ref:Metric-Topological}は，グリッドマップの幾何学的な精密さと，トポロジカルマップの計算効率の高さを統合したハイブリッドな地図構築手法を提案した．
+このメトリック・トポロジカルマップは,詳細な幾何情報と高次の抽象表現を両立させた地図表現を実現している．
 
-Konolige らもメトリック・トポロジカルマップを用いたナビゲーション手法を提案している．
-小領域のメトリックな局所地図による局所的なナビゲーションとトポロジカルグラフによる大域的な経路計画を行うことで，詳細な幾何情報に常時依存する必要はないことを示唆している．\cite{ref:Navigation-in-hybrid-metric-topological-maps}
+Konolige ら\cite{ref:Navigation-in-hybrid-metric-topological-maps}もメトリック・トポロジカルマップを用いたナビゲーション手法を提案している．
+小領域のメトリックな局所地図による局所的なナビゲーションとトポロジカルグラフによる大域的な経路計画を行うことで，詳細な幾何情報に常時依存する必要はないことを示唆している．
 
 \subsection{Visual Place Recognition}
 Visual Place Recognition（VPR）は，画像を用いて一度訪れた地点を認識する技術である．
-初期の VPR は，SIFT や SURF などの local descriptor を bag-of-words\cite{ref:bag-of-words} や VLAD\cite{ref:VLAD} により固定長ベクトルに変換し，画像検索タスクに拡張する形式が取られていた．
+初期の VPR は，SIFT や SURF などの local descriptor を bag of visual words\cite{ref:bag of visual words} や VLAD\cite{ref:VLAD} により固定長ベクトルに変換し，画像検索タスクに拡張する形式が取られていた．
 その後，NetVLAD\cite{ref:NetVLAD} や GeM\cite{ref:GeM}，CosPlace\cite{ref:CosPlace}，AnyLoc\cite{ref:AnyLoc} といった深層学習ベースの手法が登場し，高い性能を発揮している．
 
-前稿\cite{ref:robosym_ogiwara}では入力画像をパノラマ画像， VPR 手法として多種多様な環境で高い性能を発揮している AnyLoc\cite{ref:AnyLoc} を用いてトポロジカルマップの構築を行った．
-しかし，再訪地点が交差・逆方向の場合においては画像を構成する物体の位置関係が異なることで，真に同一な地点においても視覚的類似度の低下が発生しループ検出ができない場合があった．
-本稿では，パノラマシフトによるパノラマ画像の切れ目の変更を行うことで上記問題の解決を図る．
+通常のカメラの画像では，同一地点であってもカメラの向きが異なることで撮影できる景色が異なり，適切に VPR を行うことできない．
+そこで，全天球カメラで取得した全周画像を用いて各地点の全ての景色を網羅する画像を取得することで，この問題に対処した\cite{ref:robosym_ogiwara}．
+しかし，再訪地点が交差・逆方向の場合においては全周画像を構成する物体の位置関係が異なることで，同一地点であっても VPR による特徴ベクトルに違いが発生し，適切に VPR を行うことできない場合があった．
+本稿では，パノラマシフトによる全周画像の切れ目の変更を行うことで上記問題の解決を図る．
 
 
 \section{視覚場所認識によるトポロジカルマップの構築}
@@ -166,7 +169,7 @@ Visual Place Recognition（VPR）は，画像を用いて一度訪れた地点�
 \begin{figure*}[t]
   \centering
   \includegraphics[width=\linewidth]{fig/pipeline_and_concept.pdf} \vspace*{-5mm}
-  \caption{提案手法のパイプラインと概念図}
+  \caption{提案手法のパイプライン}
   \label{fig:pipeline_and_concept}
 \end{figure*}
 
@@ -440,7 +443,7 @@ Query 画像と Target 画像は，図\ref{fig:env_images}(b)の走行経路に�
       \includegraphics[width=0.9\linewidth]{fig/ex_add_node_outdoor_invverse.pdf}\\
       (d) 屋外逆方向
   \end{tabular}
-  \caption{各走行経路においてのメトリックマップ上でのノードの位置}
+  \caption{メトリックマップ上でのノードが作成された位置}
   \label{fig:ex_add_node}
 \end{figure}
 
@@ -487,25 +490,103 @@ Query 画像と Target 画像は，図\ref{fig:env_images}(b)の走行経路に�
 
 \end{figure*}
 
-\begin{table*}[t]
+
+\begin{table}[t]
+  \centering
+  \small
+  \caption{手法一覧}
+  \label{table:methods}%\vspace*{-2mm}
+  \begin{tabular}{cccc}
+  \toprule%[0.08em]  % デフォルト 0.08em（\heavyrulewidth）
+  \textbf{Method} & \textbf{Simple Th.} & \textbf{P. Shift \& Simple Th.} & \textbf{Ours}\\
+  \midrule%[0.05em]  % デフォルト 0.05em（\lightrulewidth）
+  P. Shift & \Cross & \Circle & \Circle \\
+  Sp. Co. & \Cross & \Cross & \Circle \\
+  \bottomrule%[0.08em]  % デフォルト 0.08em（\heavyrulewidth）
+  \end{tabular}
+\end{table}
+
+\begin{table}[t]
   \centering
   \small
   \caption{定量評価：屋内交差}
-  \label{table:loop_detection_eval}%\vspace*{-2mm}
+  \label{table:ld_eval_indoor_cross}%\vspace*{-2mm}
   \begin{tabular}{cccc}
   \toprule%[0.08em]  % デフォルト 0.08em（\heavyrulewidth）
-  & \textbf{Thresholding} & \textbf{with Panorama Shift} & \textbf{Ours}\\
+  & \textbf{Simple Th.} & \textbf{P. Shift \& Simple Th.} & \textbf{Ours}\\
   \midrule%[0.05em]  % デフォルト 0.05em（\lightrulewidth）
   TP & 14 & 18 & 9\\
-  FP  & 16 & 34 & 0\\
+  FP & 16 & 34 & 0\\
   TN & 72 & 58 & 81\\
-  FN  &  &  &  \\
-  Precision  &  &  & \\
-  Accuracy  &  &  & \\
-  F1 Score  &  &  & \\
+  FN & 2 & 0 & 9 \\
+  Precision \textbf{$\uparrow$} & 47\% & 35\% & \textbf{100\%}\\
+  Accuracy \textbf{$\uparrow$} & 83\% & 69\% & \textbf{91\%}\\
+  F1 Score \textbf{$\uparrow$} & 61\% & 51\% & \textbf{67\%}\\
   \bottomrule%[0.08em]  % デフォルト 0.08em（\heavyrulewidth）
   \end{tabular}
-\end{table*}
+\end{table}
+
+\begin{table}[t]
+  \centering
+  \small
+  \caption{定量評価：屋内逆方向}
+  \label{table:ld_eval_indoor_reverse}%\vspace*{-2mm}
+  \begin{tabular}{cccc}
+  \toprule%[0.08em]  % デフォルト 0.08em（\heavyrulewidth）
+  & \textbf{Simple Th.} & \textbf{P. Shift \& Simple Th.} & \textbf{Ours}\\
+  \midrule%[0.05em]  % デフォルト 0.05em（\lightrulewidth）
+  TP & 49 & 87 & 34\\
+  FP & 146 & 125 & 6\\
+  TN & 64 & 66 & 105\\
+  FN & 49 & 9 &  62\\
+  Precision \textbf{$\uparrow$} & 25\% & 41\% & \textbf{85\%}\\
+  Accuracy \textbf{$\uparrow$} & 37\% & 53\% & \textbf{67\%}\\
+  F1 Score \textbf{$\uparrow$} & 33\% & \textbf{56\%} & 50\%\\
+  \bottomrule%[0.08em]  % デフォルト 0.08em（\heavyrulewidth）
+  \end{tabular}
+\end{table}
+
+
+\begin{table}[t]
+  \centering
+  \small
+  \caption{定量評価：屋外交差}
+  \label{table:ld_eval_outdoor_cross}%\vspace*{-2mm}
+  \begin{tabular}{cccc}
+  \toprule%[0.08em]  % デフォルト 0.08em（\heavyrulewidth）
+  & \textbf{Simple Th.} & \textbf{P. Shift \& Simple Th.} & \textbf{Ours}\\
+  \midrule%[0.05em]  % デフォルト 0.05em（\lightrulewidth）
+  TP & 0 & 2 & 2\\
+  FP & 821 & 716 & 1\\
+  TN & 4 & 7 & 314\\
+  FN & 4 & 2 & 2\\
+  Precision \textbf{$\uparrow$} & 0\% & 0.28\% & \textbf{67\%}\\
+  Accuracy \textbf{$\uparrow$} & 0.48\% & 1.2\% & \textbf{99\%}\\
+  F1 Score \textbf{$\uparrow$} & 0\% & 0.55\% & \textbf{57\%}\\
+  \bottomrule%[0.08em]  % デフォルト 0.08em（\heavyrulewidth）
+  \end{tabular}
+\end{table}
+
+
+\begin{table}[t]
+  \centering
+  \small
+  \caption{定量評価：屋外逆方向}
+  \label{table:ld_eval_outdoor_reverse}%\vspace*{-2mm}
+  \begin{tabular}{cccc}
+  \toprule%[0.08em]  % デフォルト 0.08em（\heavyrulewidth）
+  & \textbf{Simple Th.} & \textbf{P. Shift \& Simple Th.} & \textbf{Ours}\\
+  \midrule%[0.05em]  % デフォルト 0.05em（\lightrulewidth）
+  TP & 38 & 69 & 42\\
+  FP & 1383 & 1124 & 54\\
+  TN & 1 & 16 & 317\\
+  FN & 50 & 15 & 42\\
+  Precision \textbf{$\uparrow$} & 2.7\% & 5.8\% & \textbf{44\%}\\
+  Accuracy \textbf{$\uparrow$} & 2.6\% & 6.9\% & \textbf{79\%}\\
+  F1 Score \textbf{$\uparrow$} & 5\% & 11\% & \textbf{47\%}\\
+  \bottomrule%[0.08em]  % デフォルト 0.08em（\heavyrulewidth）
+  \end{tabular}
+\end{table}
 
 \section{結言}
 
@@ -521,9 +602,9 @@ Query 画像と Target 画像は，図\ref{fig:env_images}(b)の走行経路に�
 
 \begin{thebibliography}{00}
 \bibitem{ref:robosym_ogiwara}
-  荻原 大智, 高橋 尚起, 君塚 康介, 中尾 天哉, 原 祥尭, 黒田 洋司: 
-  “視覚場所認識を用いたトポロジカルマップの構築”, 
-  第 30回ロボティクスシンポジア予稿集, 2025.
+  Daichi Ogiwara, Naoki Takahashi, Kosuke Kimizuka, Takaya Nakao, Yoshitaka Hara, and Yoji Kuroda: 
+  ``Topological Mapping using Visual Place Recognition'',
+  \textit{Proc. of Robotics Symposia (ROBOSYM)}, 2025. (in Japanese)
 
 \bibitem{ref:SII2026_nakao}
 Takaya Nakao, Yoshitaka Hara, and Yoji Kuroda,
@@ -537,42 +618,45 @@ Takaya Nakao, Yoshitaka Hara, and Yoji Kuroda,
 \bibitem{ref:The-Spatial-Semantic-Hierarchy}
   Benjamin Kuipers:
   ``The Spatial Semantic Hierarchy'',
-  \textit{Artiﬁcial Intelligence},vol. 119, no. 1-2, pp. 191--233, 2000.
+  \textit{Artiﬁcial Intelligence}, vol. 119, no. 1--2, pp. 191--233, 2000.
 
 \bibitem{ref:Metric-Topological}
   Sebastian Thrun:
   ``Learning Metric-Topological Maps for Indoor Mobile Robot Navigation'',
-  \textit{Artiﬁcial Intelligence},vol. 99, no. 1, pp. 21--71, 1998.
+  \textit{Artiﬁcial Intelligence}, vol. 99, no. 1, pp. 21--71, 1998.
 
 \bibitem{ref:Navigation-in-hybrid-metric-topological-maps}
   Kurt Konolige, Eitan Marder-Eppstein, and Bhaskara Marthi:
   ``Navigation in Hybrid Metric-Topological Maps'',
   \textit{Proc. of IEEE Int. Conf. on Robotics and Automation (ICRA)}, 2011.
 
-\bibitem{ref:bag-of-words}
+\bibitem{ref:bag of visual words}
   James Philbin, Ondrej Chum, Michael Isard, Josef Sivic, and Andrew Zisserman:
   ``Object Retrieval with Large Vocabularies and Fast Spatial Matching'',
-  \textit{Proc. of IEEE Int. Conf. on Computer Vision and Pattern Recognition (CVPR)}, 2007.
+  \textit{Proc. of IEEE/CVF Conf. on Computer Vision and Pattern Recognition (CVPR)}, 2007.
+  % IEEE Int. Conf. on Computer Vision and Pattern Recognition (CVPR)}, 2007.
 
 \bibitem{ref:VLAD}
   Hervé Jégou, Matthijs Douze, Cordelia Schmid, and Patrick Pérez:
   ``Aggregating Local Descriptors into a Compact Image Representation'',
-  \textit{IEEE Computer Society Conf. on Computer Vision and Pattern Recognition(CVPR)}, 2010.
+  \textit{Proc. of IEEE/CVF Conf. on Computer Vision and Pattern Recognition (CVPR)}, 2010.
 
 \bibitem{ref:NetVLAD}
   Relja Arandjelović, Petr Gronat, Akihiko Torii, Tomas Pajdla, and Josef Sivic:
   ``NetVLAD: CNN Architecture for Weakly Supervised Place Recognition'',
-  \textit{IEEE Conf. on Computer Vision and Pattern Recognition (CVPR)}, 2016.
+  % \textit{IEEE Conf. on Computer Vision and Pattern Recognition (CVPR)}, 2016.
+  \textit{Proc. of IEEE/CVF Conf. on Computer Vision and Pattern Recognition (CVPR)}, 2016.
 
 \bibitem{ref:GeM}
   Filip Radenović, Giorgos Tolias, and Ondrej Chum:
   ``Fine-Tuning CNN Image Retrieval with No Human Annotation'',
-  \textit{IEEE Trans. on Pattern Analysis and Machine Intelligence}, vol. 41, no. 7, pp. 1655-1668, 2019.
+  \textit{IEEE Trans. on Pattern Analysis and Machine Intelligence}, vol. 41, no. 7, pp. 1655--1668, 2019.
 
 \bibitem{ref:CosPlace}
   Gabriele Berton, Carlo Masone, and Barbara Caputo:
   ``Rethinking Visual Geo-localization for Large-Scale Applications'',
-  \textit{IEEE/CVF Conf. on Computer Vision and Pattern Recognition (CVPR)}, 2022.
+  % \textit{IEEE/CVF Conf. on Computer Vision and Pattern Recognition (CVPR)}, 2022.
+  \textit{Proc. of IEEE/CVF Conf. on Computer Vision and Pattern Recognition (CVPR)}, 2022.
 
 % \bibitem{ref:ndt}
 %   P. Biber, and W. Strasser: 
