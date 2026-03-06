@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2025.12.28)  6 MAR 2026 05:36
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2025.12.28)  6 MAR 2026 07:16
  restricted system commands enabled.
  file:line:error style messages enabled.
 **conference_101719.tex
@@ -2128,18 +2128,18 @@ ing_window_concept.pdf>]
 LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/it' 
 undefined
 (Font)              No change on input line 321.
-<fig/ex_sim_panorama_shift_off.pdf, id=200, 963.6pt x 284.56313pt>
+<fig/ex_sim_panorama_shift_off.pdf, id=200, 963.3591pt x 284.7438pt>
 File: fig/ex_sim_panorama_shift_off.pdf Graphic file (type pdf)
 <use fig/ex_sim_panorama_shift_off.pdf>
 Package luatex.def Info: fig/ex_sim_panorama_shift_off.pdf  used on input line 
 362.
-(luatex.def)             Requested size: 252.0pt x 74.41887pt.
-<fig/ex_sim_panorama_shift_on.pdf, id=201, 963.6pt x 284.56313pt>
+(luatex.def)             Requested size: 252.0pt x 74.4835pt.
+<fig/ex_sim_panorama_shift_on.pdf, id=201, 963.3591pt x 284.7438pt>
 File: fig/ex_sim_panorama_shift_on.pdf Graphic file (type pdf)
 <use fig/ex_sim_panorama_shift_on.pdf>
 Package luatex.def Info: fig/ex_sim_panorama_shift_on.pdf  used on input line 3
 67.
-(luatex.def)             Requested size: 252.0pt x 74.41887pt.
+(luatex.def)             Requested size: 252.0pt x 74.4835pt.
 
 Overfull \hbox (12.00002pt too wide) in paragraph at lines 361--371
  [][][][] 
@@ -2436,7 +2436,7 @@ nts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmsy9.pfb>
-Output written on conference_101719.pdf (7 pages, 3732685 bytes).
+Output written on conference_101719.pdf (7 pages, 3732887 bytes).
 
 PDF statistics: 527 PDF objects out of 1000 (max. 8388607)
  327 compressed objects within 4 object streams
